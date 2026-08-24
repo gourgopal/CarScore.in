@@ -69,12 +69,25 @@ const mockPrice = isEv ? 1500000 : 1300000;
 						{variant.brand} <br/> <span class="text-slate-300">{variant.name}</span>
 					</h1>
 				</div>
-				<div class="flex-shrink-0 bg-[#111a2a] p-6 rounded-lg border border-slate-700 shadow-xl text-center min-w-[250px]">
-          <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Estimated On-Road Price</p>
-          <p class="text-4xl font-serif font-bold text-white mb-4">{formatCurrency(mockPrice)}</p>
-					<a href="/compare" class="block w-full text-center px-4 py-3 bg-primary-500 text-[#0b131e] text-xs font-bold uppercase tracking-widest rounded hover:bg-primary-400 transition-colors">
-						Compare TCO &rarr;
-					</a>
+				<div class="flex-shrink-0 flex flex-col gap-6 items-end">
+          {variant.imageUrl && (
+            <div class="w-full sm:w-[400px] h-[250px] rounded-lg overflow-hidden border border-slate-700 shadow-xl bg-slate-900">
+              <img 
+                src={variant.imageUrl} 
+                alt={`${variant.brand} ${variant.name}`}
+                onerror="this.src='/images/placeholder-car.jpg'"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          )}
+          
+          <div class="bg-[#111a2a] p-6 rounded-lg border border-slate-700 shadow-xl text-center w-full sm:w-[400px]">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Estimated On-Road Price</p>
+            <p class="text-4xl font-serif font-bold text-white mb-4">{formatCurrency(mockPrice)}</p>
+            <a href="/compare" class="block w-full text-center px-4 py-3 bg-primary-500 text-[#0b131e] text-xs font-bold uppercase tracking-widest rounded hover:bg-primary-400 transition-colors">
+              Compare TCO &rarr;
+            </a>
+          </div>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,7 @@
     "brand": "Maruti Suzuki",
     "generationId": "swift-gen-4",
     "name": "Swift ZXi Plus",
+    "imageUrl": "/images/cars/maruti-swift-zxi-plus.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -20,6 +21,7 @@
     "brand": "Maruti Suzuki",
     "generationId": "brezza-gen-2",
     "name": "Brezza ZXi CNG",
+    "imageUrl": "/images/cars/maruti-brezza-zxi-cng.jpg",
     "powertrain": "CNG",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -36,6 +38,7 @@
     "brand": "Maruti Suzuki",
     "generationId": "fronx-gen-1",
     "name": "Fronx 1.0 Alpha Turbo AT",
+    "imageUrl": "/images/cars/maruti-fronx-alpha-turbo.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -52,6 +55,7 @@
     "brand": "Maruti Suzuki",
     "generationId": "gv-gen-1",
     "name": "Grand Vitara Alpha Plus Strong Hybrid",
+    "imageUrl": "/images/cars/maruti-grand-vitara-strong-hybrid.jpg",
     "powertrain": "STRONG_HYBRID",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -68,6 +72,7 @@
     "brand": "Hyundai",
     "generationId": "creta-gen-2-facelift",
     "name": "Creta SX Tech Diesel MT",
+    "imageUrl": "/images/cars/hyundai-creta-sx-tech-diesel.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -84,6 +89,7 @@
     "brand": "Hyundai",
     "generationId": "creta-gen-2-facelift",
     "name": "Creta SX(O) 1.5 Turbo DCT",
+    "imageUrl": "/images/cars/hyundai-creta-sx-o-turbo.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -100,6 +106,7 @@
     "brand": "Hyundai",
     "generationId": "i20-gen-3",
     "name": "i20 Asta (O) 1.2 IVT",
+    "imageUrl": "/images/cars/hyundai-i20-asta-opt.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -116,6 +123,7 @@
     "brand": "Tata",
     "generationId": "nexon-gen-2",
     "name": "Nexon EV Empowered+ LR",
+    "imageUrl": "/images/cars/tata-nexon-ev-empowered-plus-lr.jpg",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -132,6 +140,7 @@
     "brand": "Tata",
     "generationId": "nexon-gen-2",
     "name": "Nexon Fearless+ S DCT",
+    "imageUrl": "/images/cars/tata-nexon-fearless-plus-s-dct.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -148,6 +157,7 @@
     "brand": "Tata",
     "generationId": "punch-gen-1",
     "name": "Punch Accomplished DCA",
+    "imageUrl": "/images/cars/tata-punch-accomplished-dca.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -164,6 +174,7 @@
     "brand": "Tata",
     "generationId": "tiago-gen-1",
     "name": "Tiago EV XZ+ Long Range",
+    "imageUrl": "/images/cars/tata-tiago-ev-xz-plus.jpg",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -180,6 +191,7 @@
     "brand": "Tata",
     "generationId": "harrier-gen-1-facelift",
     "name": "Harrier Fearless+ AT",
+    "imageUrl": "/images/cars/tata-harrier-fearless-plus-at.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -196,6 +208,7 @@
     "brand": "Mahindra",
     "generationId": "xuv700-gen-1",
     "name": "XUV700 AX7 L Diesel AT",
+    "imageUrl": "/images/cars/mahindra-xuv700-ax7-l-diesel-at.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -212,6 +225,7 @@
     "brand": "Mahindra",
     "generationId": "thar-gen-2",
     "name": "Thar LX 4x4 Diesel MT",
+    "imageUrl": "/images/cars/mahindra-thar-lx-4x4-diesel-mt.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -228,6 +242,7 @@
     "brand": "Mahindra",
     "generationId": "scorpion-gen-1",
     "name": "Scorpio-N Z8 L Diesel AT",
+    "imageUrl": "/images/cars/mahindra-scorpio-n-z8-l-diesel-at.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -244,6 +259,7 @@
     "brand": "Kia",
     "generationId": "seltos-gen-1-facelift",
     "name": "Seltos GTX+ 1.5 Turbo DCT",
+    "imageUrl": "/images/cars/kia-seltos-gtx-plus-turbo-dct.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -260,6 +276,7 @@
     "brand": "Kia",
     "generationId": "sonet-gen-1-facelift",
     "name": "Sonet HTX Diesel AT",
+    "imageUrl": "/images/cars/kia-sonet-htx-diesel-at.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -276,6 +293,7 @@
     "brand": "Toyota",
     "generationId": "hycross-gen-1",
     "name": "Innova Hycross ZX(O) Hybrid",
+    "imageUrl": "/images/cars/toyota-innova-hycross-zx-opt.jpg",
     "powertrain": "STRONG_HYBRID",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -292,6 +310,7 @@
     "brand": "Toyota",
     "generationId": "fortuner-gen-2-facelift",
     "name": "Fortuner Legender 4x4 AT",
+    "imageUrl": "/images/cars/toyota-fortuner-legender-4x4-at.jpg",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -308,6 +327,7 @@
     "brand": "Honda",
     "generationId": "city-gen-5",
     "name": "City ZX CVT",
+    "imageUrl": "/images/cars/honda-city-zx-cvt.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -324,6 +344,7 @@
     "brand": "Honda",
     "generationId": "elevate-gen-1",
     "name": "Elevate ZX CVT",
+    "imageUrl": "/images/cars/honda-elevate-zx-cvt.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -340,6 +361,7 @@
     "brand": "MG",
     "generationId": "zs-ev-gen-1",
     "name": "ZS EV Exclusive Plus",
+    "imageUrl": "/images/cars/mg-zs-ev-exclusive-plus.jpg",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -356,6 +378,7 @@
     "brand": "MG",
     "generationId": "hector-gen-1",
     "name": "Hector Sharp Pro Petrol CVT",
+    "imageUrl": "/images/cars/mg-hector-sharp-pro-petrol-cvt.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -372,6 +395,7 @@
     "brand": "Skoda",
     "generationId": "slavia-gen-1",
     "name": "Slavia 1.5 TSI Style DSG",
+    "imageUrl": "/images/cars/skoda-slavia-15-tsi-style-dsg.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -388,6 +412,7 @@
     "brand": "Volkswagen",
     "generationId": "virtus-gen-1",
     "name": "Virtus GT Plus DSG",
+    "imageUrl": "/images/cars/vw-virtus-gt-plus-dsg.jpg",
     "powertrain": "PETROL",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -404,6 +429,7 @@
     "brand": "BYD",
     "generationId": "seal-gen-1",
     "name": "Seal Premium",
+    "imageUrl": "/images/cars/byd-seal-premium.jpg",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
     "statusProvenance": {
@@ -420,6 +446,7 @@
     "brand": "Mahindra",
     "generationId": "xuv400-gen-1",
     "name": "XUV400 EL Pro (34.5 kWh)",
+    "imageUrl": "/images/cars/mahindra-xuv400-el-pro.jpg",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
     "statusProvenance": {

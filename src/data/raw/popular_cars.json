@@ -23,7 +23,8 @@
       "performance": 9.3,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/maruti-swift-zxi-plus.jpg"
   },
   {
     "id": "maruti-brezza-zxi-cng",
@@ -49,7 +50,8 @@
       "performance": 8,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/maruti-brezza-zxi-cng.jpg"
   },
   {
     "id": "maruti-fronx-alpha-turbo",
@@ -75,7 +77,8 @@
       "performance": 7,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/maruti-fronx-alpha-turbo.jpg"
   },
   {
     "id": "maruti-grand-vitara-strong-hybrid",
@@ -101,7 +104,8 @@
       "performance": 6.7,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/maruti-grand-vitara-strong-hybrid.jpg"
   },
   {
     "id": "hyundai-creta-sx-tech-diesel",
@@ -127,7 +131,8 @@
       "performance": 8.3,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/hyundai-creta-sx-tech-diesel.jpg"
   },
   {
     "id": "hyundai-creta-sx-o-turbo",
@@ -153,7 +158,8 @@
       "performance": 6.4,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/hyundai-creta-sx-o-turbo.jpg"
   },
   {
     "id": "hyundai-i20-asta-opt",
@@ -179,7 +185,8 @@
       "performance": 7.4,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/hyundai-i20-asta-opt.jpg"
   },
   {
     "id": "tata-nexon-ev-empowered-plus-lr",
@@ -205,7 +212,8 @@
       "performance": 7.3,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/tata-nexon-ev-empowered-plus-lr.jpg"
   },
   {
     "id": "tata-nexon-fearless-plus-s-dct",
@@ -231,7 +239,8 @@
       "performance": 9.3,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/tata-nexon-fearless-plus-s-dct.jpg"
   },
   {
     "id": "tata-punch-accomplished-dca",
@@ -257,7 +266,8 @@
       "performance": 8.3,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/tata-punch-accomplished-dca.jpg"
   },
   {
     "id": "tata-tiago-ev-xz-plus",
@@ -283,7 +293,8 @@
       "performance": 6,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/tata-tiago-ev-xz-plus.jpg"
   },
   {
     "id": "tata-harrier-fearless-plus-at",
@@ -309,7 +320,8 @@
       "performance": 6.2,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/tata-harrier-fearless-plus-at.jpg"
   },
   {
     "id": "mahindra-xuv700-ax7-l-diesel-at",
@@ -335,7 +347,8 @@
       "performance": 7,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mahindra-xuv700-ax7-l-diesel-at.jpg"
   },
   {
     "id": "mahindra-thar-lx-4x4-diesel-mt",
@@ -361,7 +374,8 @@
       "performance": 9.4,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mahindra-thar-lx-4x4-diesel-mt.jpg"
   },
   {
     "id": "mahindra-scorpio-n-z8-l-diesel-at",
@@ -387,7 +401,8 @@
       "performance": 7.8,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mahindra-scorpio-n-z8-l-diesel-at.jpg"
   },
   {
     "id": "kia-seltos-gtx-plus-turbo-dct",
@@ -413,7 +428,8 @@
       "performance": 8.5,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/kia-seltos-gtx-plus-turbo-dct.jpg"
   },
   {
     "id": "kia-sonet-htx-diesel-at",
@@ -439,7 +455,8 @@
       "performance": 6,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/kia-sonet-htx-diesel-at.jpg"
   },
   {
     "id": "toyota-innova-hycross-zx-opt",
@@ -465,7 +482,8 @@
       "performance": 8.5,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/toyota-innova-hycross-zx-opt.jpg"
   },
   {
     "id": "toyota-fortuner-legender-4x4-at",
@@ -491,7 +509,8 @@
       "performance": 9.5,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/toyota-fortuner-legender-4x4-at.jpg"
   },
   {
     "id": "honda-city-zx-cvt",
@@ -517,7 +536,8 @@
       "performance": 7,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/honda-city-zx-cvt.jpg"
   },
   {
     "id": "honda-elevate-zx-cvt",
@@ -543,7 +563,8 @@
       "performance": 9.4,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/honda-elevate-zx-cvt.jpg"
   },
   {
     "id": "mg-zs-ev-exclusive-plus",
@@ -569,7 +590,8 @@
       "performance": 9,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mg-zs-ev-exclusive-plus.jpg"
   },
   {
     "id": "mg-hector-sharp-pro-petrol-cvt",
@@ -595,7 +617,8 @@
       "performance": 9.4,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mg-hector-sharp-pro-petrol-cvt.jpg"
   },
   {
     "id": "skoda-slavia-15-tsi-style-dsg",
@@ -621,7 +644,8 @@
       "performance": 9.4,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/skoda-slavia-15-tsi-style-dsg.jpg"
   },
   {
     "id": "vw-virtus-gt-plus-dsg",
@@ -647,7 +671,8 @@
       "performance": 8.7,
       "overall": 7.5,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/vw-virtus-gt-plus-dsg.jpg"
   },
   {
     "id": "byd-seal-premium",
@@ -673,7 +698,8 @@
       "performance": 6.2,
       "overall": 7.7,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/byd-seal-premium.jpg"
   },
   {
     "id": "mahindra-xuv400-el-pro",
@@ -699,6 +725,7 @@
       "performance": 7.2,
       "overall": 7.6,
       "grade": "B+"
-    }
+    },
+    "imageUrl": "/images/cars/mahindra-xuv400-el-pro.jpg"
   }
 ]

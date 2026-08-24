@@ -85,6 +85,7 @@ export const VariantSchema = z.object({
   brand: z.string(),
   generationId: z.string(),
   name: z.string(),
+  imageUrl: z.string().optional(),
   powertrain: Powertrain,
   status: VehicleStatus,
   statusProvenance: ProvenanceMetadata,

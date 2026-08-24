@@ -120,22 +120,36 @@ export function FindMyMatch() {
         {results.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {results.map((variant) => (
-              <a key={variant.id} href={`/cars/${variant.id}`} className="group bg-[#111a2a] rounded-lg border border-slate-700 hover:border-primary-500 p-6 transition-colors flex flex-col justify-between">
-                <div>
-                  <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">{variant.brand}</p>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">{variant.name}</h3>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-widest uppercase border text-slate-400 bg-slate-800 border-slate-700">
-                      {variant.powertrain.replace('_', ' ')}
-                    </span>
-                    <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-widest uppercase border text-slate-400 bg-slate-800 border-slate-700">
-                      {variant.transmission.replace('_', ' ')}
-                    </span>
+              <a key={variant.id} href={`/cars/${variant.id}`} className="group bg-[#111a2a] rounded-lg border border-slate-700 hover:border-primary-500 transition-colors flex flex-col justify-between overflow-hidden">
+                
+                {variant.imageUrl && (
+                  <div className="h-48 w-full bg-slate-900 border-b border-slate-800">
+                    <img 
+                      src={variant.imageUrl} 
+                      alt={`${variant.brand} ${variant.name}`} 
+                      onError={(e) => { e.currentTarget.src = '/images/placeholder-car.jpg'; }}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
                   </div>
-                </div>
-                <div className="mt-8 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-slate-500">
-                  <span>View Details</span>
-                  <span className="group-hover:text-primary-400 transition-colors">&rarr;</span>
+                )}
+
+                <div className="p-6 flex-grow flex flex-col justify-between">
+                  <div>
+                    <p className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-1">{variant.brand}</p>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">{variant.name}</h3>
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-widest uppercase border text-slate-400 bg-slate-800 border-slate-700">
+                        {variant.powertrain.replace('_', ' ')}
+                      </span>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold tracking-widest uppercase border text-slate-400 bg-slate-800 border-slate-700">
+                        {variant.transmission.replace('_', ' ')}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-8 flex justify-between items-center text-xs font-bold uppercase tracking-widest text-slate-500">
+                    <span>View Details</span>
+                    <span className="group-hover:text-primary-400 transition-colors">&rarr;</span>
+                  </div>
                 </div>
               </a>
             ))}
