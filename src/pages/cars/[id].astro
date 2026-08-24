@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const dataPath = path.join(process.cwd(), 'public', 'data', 'variants.json');
+  const rawData = fs.readFileSync(dataPath, 'utf-8');
+  const variants = JSON.parse(rawData);
+
+  return variants.map((variant: any) => {
+    return {
+      params: { id: variant.id },
+      props: { variant },
+    };
+  });
+}
+
+const { variant } = Astro.props;
+
+const formatCurrency = (val: number) => 
+  new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
+
+const getPowertrainColor = (powertrain: string) => {
+  switch (powertrain) {
+    case 'ELECTRIC': return 'text-emerald-400 bg-emerald-900/30 border-emerald-800';
+    case 'PETROL': return 'text-blue-400 bg-blue-900/30 border-blue-800';
+    case 'DIESEL': return 'text-slate-400 bg-slate-800 border-slate-700';
+    case 'CNG': return 'text-green-400 bg-green-900/30 border-green-800';
+    case 'STRONG_HYBRID': return 'text-purple-400 bg-purple-900/30 border-purple-800';
+    default: return 'text-slate-400 bg-slate-800 border-slate-700';
+  }
+};
+
+// Mock defaults for display (since exact price isn't in JSON schema yet)
+const isEv = variant.powertrain === 'ELECTRIC';
+const mockPrice = isEv ? 1500000 : 1300000;
+---
+
+<Layout 
+	title={`${variant.brand} ${variant.name} - Specs, Price & TCO`} 
+	description={`Detailed specifications, Total Cost of Ownership (TCO), and running costs for the ${variant.brand} ${variant.name} (${variant.powertrain}).`}
+>
+	<div class="bg-[#0b131e] border-b border-slate-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex text-xs font-bold uppercase tracking-widest text-slate-500 mb-8">
+        <a href="/" class="hover:text-primary-400 transition-colors">Home</a>
+        <span class="mx-2">&rsaquo;</span>
+        <a href="/cars" class="hover:text-primary-400 transition-colors">Cars</a>
+        <span class="mx-2">&rsaquo;</span>
+        <span class="text-slate-300">{variant.brand}</span>
+      </nav>
+
+			<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+				<div class="max-w-3xl">
+          <div class="flex flex-wrap gap-3 mb-4">
+            <span class={`inline-flex items-center px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase border ${getPowertrainColor(variant.powertrain)}`}>
+              {variant.powertrain.replace('_', ' ')}
+            </span>
+            {variant.statusProvenance.confidence >= 90 && (
+              <span class="inline-flex items-center px-3 py-1 rounded text-[10px] font-bold tracking-widest uppercase border bg-primary-500 text-[#0b131e] border-primary-500">
+                OEM VERIFIED
+              </span>
+            )}
+          </div>
+					<h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold text-white tracking-tight leading-tight">
+						{variant.brand} <br/> <span class="text-slate-300">{variant.name}</span>
+					</h1>
+				</div>
+				<div class="flex-shrink-0 bg-[#111a2a] p-6 rounded-lg border border-slate-700 shadow-xl text-center min-w-[250px]">
+          <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Estimated On-Road Price</p>
+          <p class="text-4xl font-serif font-bold text-white mb-4">{formatCurrency(mockPrice)}</p>
+					<a href="/compare" class="block w-full text-center px-4 py-3 bg-primary-500 text-[#0b131e] text-xs font-bold uppercase tracking-widest rounded hover:bg-primary-400 transition-colors">
+						Compare TCO &rarr;
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Specs Column -->
+      <div class="lg:col-span-2 space-y-8">
+        <h2 class="text-2xl font-serif font-bold text-white">Technical Specifications</h2>
+        
+        <div class="bg-[#111a2a] rounded-lg border border-slate-700 overflow-hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-slate-800">
+            
+            <div class="p-6">
+              <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Transmission</p>
+              <p class="text-lg font-bold text-slate-200">{variant.transmission}</p>
+            </div>
+            
+            {variant.engineDisplacementCc && (
+              <div class="p-6">
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Engine Displacement</p>
+                <p class="text-lg font-bold text-slate-200">{variant.engineDisplacementCc} cc</p>
+              </div>
+            )}
+            
+            {variant.batteryCapacityKwh && (
+              <div class="p-6">
+                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Battery Capacity</p>
+                <p class="text-lg font-bold text-slate-200">{variant.batteryCapacityKwh} kWh</p>
+              </div>
+            )}
+
+            <div class="p-6">
+              <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Current Status</p>
+              <p class="text-lg font-bold text-slate-200">{variant.status.replace('_', ' ')}</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="bg-[#0f1725] p-6 rounded-lg border border-slate-800">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Data verified on {variant.statusProvenance.verifiedDate} via {variant.statusProvenance.sourceType.replace('_', ' ')}. 
+            Confidence score: {variant.statusProvenance.confidence}%.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-serif font-bold text-white">Financial Tools</h2>
+        
+        <a href="/calculators/emi" class="block bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors group">
+          <h3 class="text-lg font-bold text-white mb-2">Loan & EMI Calculator</h3>
+          <p class="text-sm text-slate-400 mb-4">Plan your finance structure for the {variant.name}.</p>
+          <span class="text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:text-primary-300">Calculate &rarr;</span>
+        </a>
+
+        {isEv ? (
+          <a href="/calculators/ev-charging-cost" class="block bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors group">
+            <h3 class="text-lg font-bold text-white mb-2">EV Charging Cost</h3>
+            <p class="text-sm text-slate-400 mb-4">Calculate home vs public charging costs for {variant.batteryCapacityKwh} kWh battery.</p>
+            <span class="text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:text-primary-300">Calculate &rarr;</span>
+          </a>
+        ) : (
+          <a href="/calculators/fuel-cost" class="block bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors group">
+            <h3 class="text-lg font-bold text-white mb-2">Fuel Cost Calculator</h3>
+            <p class="text-sm text-slate-400 mb-4">Calculate real-world running costs per kilometre.</p>
+            <span class="text-xs font-bold text-primary-400 uppercase tracking-widest group-hover:text-primary-300">Calculate &rarr;</span>
+          </a>
+        )}
+      </div>
+
+    </div>
+	</div>
+</Layout>
