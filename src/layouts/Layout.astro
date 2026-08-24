@@ -1,23 +1,78 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'Compare the true cost of owning cars in India using transparent assumptions you can change.' } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title} | CarScore.in</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://www.carscore.in').href} />
 	</head>
-	<body>
-		<slot />
+	<body class="min-h-screen bg-gray-50 flex flex-col font-sans text-gray-900">
+		<header class="bg-white border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between h-16 items-center">
+					<div class="flex-shrink-0 flex items-center">
+						<a href="/" class="text-2xl font-bold text-blue-600">CarScore.in</a>
+					</div>
+					<nav class="hidden md:flex space-x-8">
+						<a href="/compare" class="text-gray-600 hover:text-blue-600 font-medium">Compare Cars</a>
+						<a href="/calculators" class="text-gray-600 hover:text-blue-600 font-medium">Calculators</a>
+						<a href="/methodology" class="text-gray-600 hover:text-blue-600 font-medium">Methodology</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<footer class="bg-white border-t border-gray-200 mt-12">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div>
+						<h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Calculators</h3>
+						<ul class="mt-4 space-y-2">
+							<li><a href="/calculators/total-cost-of-ownership" class="text-base text-gray-500 hover:text-gray-900">Total Cost of Ownership</a></li>
+							<li><a href="/calculators/fuel-cost" class="text-base text-gray-500 hover:text-gray-900">Fuel Cost Calculator</a></li>
+							<li><a href="/calculators/emi" class="text-base text-gray-500 hover:text-gray-900">EMI Calculator</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Company</h3>
+						<ul class="mt-4 space-y-2">
+							<li><a href="/about" class="text-base text-gray-500 hover:text-gray-900">About Us</a></li>
+							<li><a href="/editorial-policy" class="text-base text-gray-500 hover:text-gray-900">Editorial Policy</a></li>
+							<li><a href="/contact" class="text-base text-gray-500 hover:text-gray-900">Contact</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Legal</h3>
+						<ul class="mt-4 space-y-2">
+							<li><a href="/privacy" class="text-base text-gray-500 hover:text-gray-900">Privacy Policy</a></li>
+							<li><a href="/terms" class="text-base text-gray-500 hover:text-gray-900">Terms of Use</a></li>
+							<li><a href="/disclaimer" class="text-base text-gray-500 hover:text-gray-900">Disclaimer</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-400">
+					&copy; {new Date().getFullYear()} CarScore.in. An independent automotive utility platform.
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

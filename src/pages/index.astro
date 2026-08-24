@@ -1,11 +1,72 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Compare the true cost of owning cars in India">
+	<div class="bg-blue-50 py-16 sm:py-24">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+				<span class="block">Compare the true cost of</span>
+				<span class="block text-blue-600">owning cars in India.</span>
+			</h1>
+			<p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+				Independent calculations using transparent assumptions you can change. Understand real on-road prices, running costs, EMIs, and resale value.
+			</p>
+			<div class="mt-10 flex justify-center gap-4">
+				<a href="/compare" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+					Compare ownership cost
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Popular Calculators</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+			
+			<a href="/calculators/total-cost-of-ownership" class="group block p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+				<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600">Total Cost of Ownership &rarr;</h3>
+				<p class="mt-2 text-sm text-gray-500">Find out how much a car actually costs over 5 years including fuel, insurance, service, and resale.</p>
+			</a>
+
+			<a href="/calculators/fuel-cost" class="group block p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+				<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600">Fuel Cost Calculator &rarr;</h3>
+				<p class="mt-2 text-sm text-gray-500">Compare monthly and annual fuel expenses between Petrol, Diesel, and CNG cars.</p>
+			</a>
+
+			<a href="/calculators/ev-charging-cost" class="group block p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+				<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600">EV Charging Cost &rarr;</h3>
+				<p class="mt-2 text-sm text-gray-500">Calculate the true cost of running an EV based on home vs. public charging ratios.</p>
+			</a>
+
+			<a href="/calculators/emi" class="group block p-6 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-shadow">
+				<h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600">Car EMI Calculator &rarr;</h3>
+				<p class="mt-2 text-sm text-gray-500">Plan your car loan effectively with breakdown of principal, interest, and total outflow.</p>
+			</a>
+
+		</div>
+	</div>
+
+	<div class="bg-gray-100 py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold text-gray-900">How CarScore works</h2>
+			<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="text-blue-600 text-4xl mb-4 font-bold">1</div>
+					<h3 class="text-xl font-bold mb-2">Transparent Data</h3>
+					<p class="text-gray-600">We source data directly from OEMs and official bodies, explicitly labelling what is verified, derived, or estimated.</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="text-blue-600 text-4xl mb-4 font-bold">2</div>
+					<h3 class="text-xl font-bold mb-2">You set the rules</h3>
+					<p class="text-gray-600">Don't agree with the claimed mileage? Drive more than average? You can override our assumptions to fit your usage.</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="text-blue-600 text-4xl mb-4 font-bold">3</div>
+					<h3 class="text-xl font-bold mb-2">Independent</h3>
+					<p class="text-gray-600">We aren't a dealership trying to sell you a car or a loan. We provide objective maths to help you make the right choice.</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>
