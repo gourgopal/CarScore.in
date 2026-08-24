@@ -16,21 +16,21 @@ export function TcoCompare() {
   return (
     <div className="space-y-8">
       {/* Controls */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col sm:flex-row gap-6 items-center justify-between">
+      <div className="bg-[#111a2a] p-6 rounded-lg border border-slate-700 shadow-sm flex flex-col sm:flex-row gap-6 items-center justify-between">
         <div className="flex flex-wrap gap-6 items-center w-full sm:w-auto">
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Annual Distance (km)</label>
+            <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Annual Distance (km)</label>
             <input 
               type="number" 
-              className="w-32 rounded-lg border-slate-300 border px-3 py-2 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none" 
+              className="w-32 rounded border border-slate-700 bg-[#0f1725] text-white px-3 py-2 text-sm font-medium focus:ring-1 focus:ring-primary-500 focus:outline-none" 
               value={annualKm}
               onChange={(e) => setAnnualKm(Number(e.target.value))}
             />
           </div>
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Ownership (Years)</label>
+            <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Ownership (Years)</label>
             <select 
-              className="w-32 rounded-lg border-slate-300 border px-3 py-2 text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white"
+              className="w-32 rounded border border-slate-700 bg-[#0f1725] text-white px-3 py-2 text-sm font-medium focus:ring-1 focus:ring-primary-500 focus:outline-none"
               value={years}
               onChange={(e) => setYears(Number(e.target.value))}
             >
@@ -38,7 +38,7 @@ export function TcoCompare() {
             </select>
           </div>
         </div>
-        <Button variant="outline" className="border-dashed border-2 border-slate-300">+ Add Car</Button>
+        <Button variant="outline" className="border-dashed">+ Add Car</Button>
       </div>
 
       {/* Comparison Grid */}
@@ -57,40 +57,40 @@ export function TcoCompare() {
           const economicTco = acquisition + totalEnergy + totalService + insurance - resale;
 
           return (
-            <Card key={variant.id} className="relative hover:border-blue-300 transition-colors">
+            <Card key={variant.id} className="relative hover:border-primary-500 transition-colors">
               <div className="absolute -top-3 left-4">
                 <ConfidenceBadge score={variant.statusProvenance.confidence} />
               </div>
               <CardContent className="pt-8 space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg leading-tight text-slate-900">{variant.name}</h3>
-                  <p className="text-xs font-bold text-slate-500 mt-1.5 uppercase tracking-widest">{variant.powertrain}</p>
+                  <h3 className="font-serif font-bold text-2xl leading-tight text-white mb-2">{variant.name}</h3>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">{variant.powertrain} · {variant.brand}</p>
                 </div>
                 
-                <div className="bg-slate-900 rounded-xl p-5 text-center text-white">
-                  <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">{years}-Year TCO</p>
-                  <p className="text-3xl font-extrabold tracking-tight">{formatCurrency(economicTco)}</p>
-                  <p className="text-xs text-slate-400 font-medium mt-2">{formatCurrency(economicTco / (annualKm * years))} / km</p>
+                <div className="border border-slate-700 rounded p-5 text-center bg-[#0f1725]">
+                  <p className="text-[10px] font-bold text-primary-500 uppercase tracking-widest mb-2">{years}-Year TCO</p>
+                  <p className="text-3xl font-serif font-bold tracking-tight text-white">{formatCurrency(economicTco)}</p>
+                  <p className="text-xs text-slate-500 font-medium mt-2">{formatCurrency(economicTco / (annualKm * years))} / km</p>
                 </div>
 
                 <div className="space-y-3 text-sm">
-                  <div className="flex justify-between border-b border-slate-100 pb-2">
-                    <span className="text-slate-500 font-medium">Acquisition</span>
-                    <span className="font-bold text-slate-900">{formatCurrency(acquisition)}</span>
+                  <div className="flex justify-between border-b border-slate-800 pb-2">
+                    <span className="text-slate-400 font-medium">Acquisition</span>
+                    <span className="font-bold text-slate-200">{formatCurrency(acquisition)}</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-100 pb-2">
-                    <span className="text-slate-500 font-medium">Energy ({years}Y)</span>
-                    <span className="font-bold text-slate-900">{formatCurrency(totalEnergy)}</span>
+                  <div className="flex justify-between border-b border-slate-800 pb-2">
+                    <span className="text-slate-400 font-medium">Energy ({years}Y)</span>
+                    <span className="font-bold text-slate-200">{formatCurrency(totalEnergy)}</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-100 pb-2">
-                    <span className="text-slate-500 font-medium">Maintenance ({years}Y)</span>
-                    <span className="font-bold text-slate-900">{formatCurrency(totalService)}</span>
+                  <div className="flex justify-between border-b border-slate-800 pb-2">
+                    <span className="text-slate-400 font-medium">Maintenance ({years}Y)</span>
+                    <span className="font-bold text-slate-200">{formatCurrency(totalService)}</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-100 pb-2">
-                    <span className="text-slate-500 font-medium">Insurance ({years}Y)</span>
-                    <span className="font-bold text-slate-900">{formatCurrency(insurance)}</span>
+                  <div className="flex justify-between border-b border-slate-800 pb-2">
+                    <span className="text-slate-400 font-medium">Insurance ({years}Y)</span>
+                    <span className="font-bold text-slate-200">{formatCurrency(insurance)}</span>
                   </div>
-                  <div className="flex justify-between text-blue-600 font-bold pt-1">
+                  <div className="flex justify-between text-primary-400 font-bold pt-1">
                     <span>Est. Resale</span>
                     <span>- {formatCurrency(resale)}</span>
                   </div>

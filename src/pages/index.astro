@@ -4,133 +4,98 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Compare the true cost of owning cars in India">
 	{/* Hero Section */}
-	<div class="bg-slate-900 text-white py-20 sm:py-28 border-b border-slate-800">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-			<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-blue-900/50 text-blue-400 border border-blue-800 mb-6">
-				Data-driven insights
-			</span>
-			<h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-				<span class="block text-slate-100">The true cost of</span>
-				<span class="block text-blue-500 mt-2">owning cars in India.</span>
-			</h1>
-			<p class="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 font-medium">
-				Independent calculations using transparent assumptions you can change. Understand real on-road prices, running costs, EMIs, and resale value.
-			</p>
-			<div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-				<a href="/compare" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-lg text-white bg-blue-600 hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20">
-					Start Comparison
-				</a>
-				<a href="/calculators/total-cost-of-ownership" class="inline-flex items-center justify-center px-8 py-3.5 border border-slate-700 text-base font-bold rounded-lg text-white bg-slate-800 hover:bg-slate-700 transition-colors">
-					View Methodology
-				</a>
+	<div class="bg-[#0b131e] text-white py-20 sm:py-28 relative overflow-hidden">
+		<!-- Subtle background gradient/glow -->
+		<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-[#111f36] to-transparent opacity-50 pointer-events-none"></div>
+		
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+			<div class="max-w-3xl">
+				<span class="inline-flex items-center px-3 py-1 rounded text-xs font-bold tracking-widest uppercase text-primary-400 mb-6 font-sans">
+					Home / India's Automotive utility
+				</span>
+				<h1 class="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl font-serif">
+					<span class="block text-white">Cars earn their</span>
+					<span class="block text-primary-500 mt-2">true value.</span>
+				</h1>
+				<p class="mt-6 text-lg sm:text-xl text-slate-400 font-medium font-sans leading-relaxed max-w-2xl">
+					Independent calculations using transparent assumptions you can change. Understand real on-road prices, running costs, EMIs, and resale value.
+				</p>
+				<div class="mt-10 flex flex-col sm:flex-row gap-4">
+					<a href="/compare" class="inline-flex items-center justify-center px-8 py-3.5 border border-primary-500 text-sm font-bold uppercase tracking-widest rounded text-[#0b131e] bg-primary-500 hover:bg-primary-400 transition-colors">
+						Start Comparison &rarr;
+					</a>
+					<a href="/calculators/total-cost-of-ownership" class="inline-flex items-center justify-center px-8 py-3.5 border border-slate-700 text-sm font-bold uppercase tracking-widest rounded text-white hover:bg-slate-800 hover:border-slate-600 transition-colors">
+						View Methodology
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{/* Stats Banner */}
+	<div class="border-y border-slate-800 bg-[#0b131e] py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-800 text-center">
+				<div class="py-4 md:py-0">
+					<p class="text-3xl font-serif font-bold text-white">4</p>
+					<p class="text-xs text-slate-500 font-sans tracking-wide mt-2">Calculators built</p>
+				</div>
+				<div class="py-4 md:py-0">
+					<p class="text-3xl font-serif font-bold text-white">100%</p>
+					<p class="text-xs text-slate-500 font-sans tracking-wide mt-2">Data transparency</p>
+				</div>
+				<div class="py-4 md:py-0">
+					<p class="text-3xl font-serif font-bold text-white">0</p>
+					<p class="text-xs text-slate-500 font-sans tracking-wide mt-2">Dealership ads</p>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	{/* Main Reports Section */}
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-		<div class="flex items-baseline justify-between mb-8 border-b border-slate-200 pb-4">
-			<h2 class="text-2xl font-bold text-slate-900">Calculators & Reports</h2>
-			<a href="/calculators" class="text-sm font-bold text-blue-600 hover:text-blue-800">View all &rarr;</a>
+		<div class="flex items-baseline justify-between mb-8 border-b border-slate-800 pb-4">
+			<h2 class="text-2xl font-serif font-bold text-white">Calculators & Reports</h2>
 		</div>
 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 			
-			<a href="/compare" class="group flex flex-col bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
-				<div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+			<a href="/compare" class="group flex flex-col bg-[#111a2a] rounded-lg border border-slate-700 p-6 hover:border-primary-500 transition-colors">
+				<div class="w-10 h-10 bg-slate-800 text-primary-400 rounded flex items-center justify-center mb-6 group-hover:bg-primary-500 group-hover:text-[#0b131e] transition-colors">
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
 				</div>
-				<h3 class="text-lg font-bold text-slate-900 mb-2">N-Car Comparison</h3>
-				<p class="text-sm text-slate-500 font-medium leading-relaxed flex-grow">Compare 5-year TCO across multiple variants side-by-side.</p>
+				<h3 class="text-lg font-serif font-bold text-white mb-2">N-Car Comparison</h3>
+				<p class="text-sm text-slate-400 font-sans font-medium leading-relaxed flex-grow">Compare 5-year TCO across multiple variants side-by-side.</p>
+				<p class="text-xs font-bold text-primary-400 uppercase tracking-widest mt-6 group-hover:text-primary-300">Start Compare &rarr;</p>
 			</a>
 
-			<a href="/calculators/fuel-cost" class="group flex flex-col bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
-				<div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-slate-800 group-hover:text-white transition-colors">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+			<a href="/calculators/fuel-cost" class="group flex flex-col bg-[#111a2a] rounded-lg border border-slate-700 p-6 hover:border-primary-500 transition-colors">
+				<div class="w-10 h-10 bg-slate-800 text-primary-400 rounded flex items-center justify-center mb-6 group-hover:bg-primary-500 group-hover:text-[#0b131e] transition-colors">
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
 				</div>
-				<h3 class="text-lg font-bold text-slate-900 mb-2">Fuel Cost Calculator</h3>
-				<p class="text-sm text-slate-500 font-medium leading-relaxed flex-grow">Calculate precise monthly and annual fuel expenses based on live prices.</p>
+				<h3 class="text-lg font-serif font-bold text-white mb-2">Fuel Cost</h3>
+				<p class="text-sm text-slate-400 font-sans font-medium leading-relaxed flex-grow">Calculate precise monthly and annual fuel expenses based on live prices.</p>
+				<p class="text-xs font-bold text-primary-400 uppercase tracking-widest mt-6 group-hover:text-primary-300">Calculate &rarr;</p>
 			</a>
 
-			<a href="/calculators/ev-charging-cost" class="group flex flex-col bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-green-300 transition-all">
-				<div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+			<a href="/calculators/ev-charging-cost" class="group flex flex-col bg-[#111a2a] rounded-lg border border-slate-700 p-6 hover:border-primary-500 transition-colors">
+				<div class="w-10 h-10 bg-slate-800 text-primary-400 rounded flex items-center justify-center mb-6 group-hover:bg-primary-500 group-hover:text-[#0b131e] transition-colors">
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
 				</div>
-				<h3 class="text-lg font-bold text-slate-900 mb-2">EV Charging Cost</h3>
-				<p class="text-sm text-slate-500 font-medium leading-relaxed flex-grow">Blend your home and public charging ratios to find true EV running costs.</p>
+				<h3 class="text-lg font-serif font-bold text-white mb-2">EV Charging</h3>
+				<p class="text-sm text-slate-400 font-sans font-medium leading-relaxed flex-grow">Blend your home and public charging ratios to find true EV running costs.</p>
+				<p class="text-xs font-bold text-primary-400 uppercase tracking-widest mt-6 group-hover:text-primary-300">Calculate &rarr;</p>
 			</a>
 
-			<a href="/calculators/emi" class="group flex flex-col bg-white rounded-xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:border-blue-300 transition-all">
-				<div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center mb-4 group-hover:bg-slate-800 group-hover:text-white transition-colors">
-					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+			<a href="/calculators/emi" class="group flex flex-col bg-[#111a2a] rounded-lg border border-slate-700 p-6 hover:border-primary-500 transition-colors">
+				<div class="w-10 h-10 bg-slate-800 text-primary-400 rounded flex items-center justify-center mb-6 group-hover:bg-primary-500 group-hover:text-[#0b131e] transition-colors">
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
 				</div>
-				<h3 class="text-lg font-bold text-slate-900 mb-2">Loan & EMI</h3>
-				<p class="text-sm text-slate-500 font-medium leading-relaxed flex-grow">Plan your car loan with a complete breakdown of principal and interest.</p>
+				<h3 class="text-lg font-serif font-bold text-white mb-2">Loan & EMI</h3>
+				<p class="text-sm text-slate-400 font-sans font-medium leading-relaxed flex-grow">Plan your car loan with a complete breakdown of principal and interest.</p>
+				<p class="text-xs font-bold text-primary-400 uppercase tracking-widest mt-6 group-hover:text-primary-300">Calculate &rarr;</p>
 			</a>
 
-		</div>
-	</div>
-
-	{/* Trust / Data Principles Section */}
-	<div class="bg-white border-t border-slate-200 py-20">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-				<div>
-					<h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-6">Built on rigorous automotive data.</h2>
-					<p class="text-lg text-slate-600 mb-8 font-medium">We don't sell cars or loans. Our platform is designed as an objective, data-first utility to bring transparency to the Indian automotive market.</p>
-					
-					<dl class="space-y-6">
-						<div class="flex">
-							<div class="flex-shrink-0">
-								<div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600 font-bold">1</div>
-							</div>
-							<div class="ml-4">
-								<dt class="text-lg leading-6 font-bold text-slate-900">Provenanced Data</dt>
-								<dd class="mt-1 text-base text-slate-500 font-medium">Every spec is tagged with its source—from OEM Official to Derived Estimates—so you know exactly what to trust.</dd>
-							</div>
-						</div>
-						<div class="flex">
-							<div class="flex-shrink-0">
-								<div class="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600 font-bold">2</div>
-							</div>
-							<div class="ml-4">
-								<dt class="text-lg leading-6 font-bold text-slate-900">Customizable Variables</dt>
-								<dd class="mt-1 text-base text-slate-500 font-medium">Don't agree with ARAI mileage claims? You can override our assumptions to match your real-world usage.</dd>
-							</div>
-						</div>
-					</dl>
-				</div>
-				<div class="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-					{/* Mock Data Dashboard UI Element */}
-					<div class="space-y-4">
-						<div class="flex justify-between items-center border-b border-slate-200 pb-4">
-							<div>
-								<p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Example Output</p>
-								<h4 class="text-lg font-bold text-slate-900 mt-1">Economic TCO</h4>
-							</div>
-							<span class="bg-green-100 text-green-800 text-xs font-bold px-2.5 py-1 rounded-full">100% Confidence</span>
-						</div>
-						<div class="grid grid-cols-2 gap-4 pt-2">
-							<div>
-								<p class="text-xs font-bold text-slate-500 uppercase">Acquisition</p>
-								<p class="text-lg font-bold text-slate-900">₹ 15,00,000</p>
-							</div>
-							<div>
-								<p class="text-xs font-bold text-slate-500 uppercase">Energy (5 Yrs)</p>
-								<p class="text-lg font-bold text-slate-900">₹ 4,87,500</p>
-							</div>
-							<div>
-								<p class="text-xs font-bold text-slate-500 uppercase">Depreciation</p>
-								<p class="text-lg font-bold text-red-600">- ₹ 6,75,000</p>
-							</div>
-							<div>
-								<p class="text-xs font-bold text-slate-500 uppercase">Net Loss</p>
-								<p class="text-lg font-bold text-slate-900">₹ 13,12,500</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 </Layout>

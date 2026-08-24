@@ -22,23 +22,33 @@ const { title, description = 'Compare the true cost of owning cars in India usin
 		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site || 'https://www.carscore.in').href} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 	</head>
-	<body class="min-h-screen bg-slate-50 flex flex-col font-sans text-slate-900">
-		<header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+	<body class="min-h-screen bg-[#0b131e] flex flex-col font-sans text-slate-300">
+		<header class="bg-[#0b131e] border-b border-slate-800 sticky top-0 z-50">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between h-16 items-center">
+				<div class="flex justify-between h-20 items-center">
 					<div class="flex-shrink-0 flex items-center">
-						<a href="/" class="text-2xl font-extrabold text-white tracking-tight">
-							CarScore<span class="text-blue-500">.in</span>
+						<a href="/" class="text-2xl font-serif font-extrabold text-white tracking-tight flex items-center gap-2">
+							<div class="w-10 h-10 rounded-full border-2 border-primary-500 flex items-center justify-center text-primary-500">
+								C
+							</div>
+							<span>CarScore<span class="text-primary-500">.in</span></span>
 						</a>
 					</div>
 					<nav class="hidden md:flex space-x-8">
 						<a href="/compare" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Compare Cars</a>
 						<a href="/calculators/total-cost-of-ownership" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">TCO Report</a>
-						<a href="/calculators" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Calculators</a>
-						<a href="/methodology" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Methodology</a>
+						<a href="/calculators/fuel-cost" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Fuel Cost</a>
+						<a href="/calculators/ev-charging-cost" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">EV Charging</a>
+						<a href="/calculators/emi" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">EMI</a>
+						<a href="/methodology/total-cost-of-ownership" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Methodology</a>
 					</nav>
+					<div class="hidden md:flex items-center">
+						<a href="/compare" class="border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-[#0b131e] font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded transition-colors">
+							Find My Match
+						</a>
+					</div>
 					<div class="md:hidden flex items-center">
 						<button class="text-slate-300 hover:text-white">
 							<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -52,34 +62,37 @@ const { title, description = 'Compare the true cost of owning cars in India usin
 			<slot />
 		</main>
 
-		<footer class="bg-slate-900 border-t border-slate-800 mt-12">
+		<footer class="bg-[#0b131e] border-t border-slate-800 mt-12">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 				<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
 					<div class="col-span-1 md:col-span-2">
-						<a href="/" class="text-xl font-bold text-white">CarScore<span class="text-blue-500">.in</span></a>
-						<p class="mt-4 text-sm text-slate-400 max-w-sm">
+						<a href="/" class="text-xl font-serif font-bold text-white flex items-center gap-2">
+							<div class="w-8 h-8 rounded-full border-2 border-primary-500 flex items-center justify-center text-primary-500 text-sm">C</div>
+							<span>CarScore<span class="text-primary-500">.in</span></span>
+						</a>
+						<p class="mt-4 text-sm text-slate-400 max-w-sm font-sans">
 							An independent automotive utility platform. We provide objective maths to help you make the right car buying decision.
 						</p>
 					</div>
 					<div>
-						<h3 class="text-xs font-bold text-slate-100 uppercase tracking-wider">Reports & Calculators</h3>
-						<ul class="mt-4 space-y-2">
-							<li><a href="/compare" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">N-Car Comparison</a></li>
-							<li><a href="/calculators/total-cost-of-ownership" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">TCO Report</a></li>
-							<li><a href="/calculators/fuel-cost" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">Fuel Efficiency</a></li>
-							<li><a href="/calculators/emi" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">EMI Breakdown</a></li>
+						<h3 class="text-xs font-bold text-slate-100 uppercase tracking-wider font-sans">Reports & Calculators</h3>
+						<ul class="mt-4 space-y-2 font-sans">
+							<li><a href="/compare" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">N-Car Comparison</a></li>
+							<li><a href="/calculators/total-cost-of-ownership" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">TCO Report</a></li>
+							<li><a href="/calculators/fuel-cost" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Fuel Efficiency</a></li>
+							<li><a href="/calculators/emi" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">EMI Breakdown</a></li>
 						</ul>
 					</div>
 					<div>
-						<h3 class="text-xs font-bold text-slate-100 uppercase tracking-wider">Legal</h3>
-						<ul class="mt-4 space-y-2">
-							<li><a href="/about" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">About Us</a></li>
-							<li><a href="/editorial-policy" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">Editorial Policy</a></li>
-							<li><a href="/privacy" class="text-sm text-slate-400 hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+						<h3 class="text-xs font-bold text-slate-100 uppercase tracking-wider font-sans">Legal</h3>
+						<ul class="mt-4 space-y-2 font-sans">
+							<li><a href="/about" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">About Us</a></li>
+							<li><a href="/editorial-policy" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Editorial Policy</a></li>
+							<li><a href="/privacy" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="mt-12 border-t border-slate-800 pt-8 text-sm text-slate-500 flex justify-between items-center">
+				<div class="mt-12 border-t border-slate-800 pt-8 text-sm text-slate-500 flex justify-between items-center font-sans">
 					<p>&copy; {new Date().getFullYear()} CarScore.in. All rights reserved.</p>
 					<p>Data updated daily.</p>
 				</div>
