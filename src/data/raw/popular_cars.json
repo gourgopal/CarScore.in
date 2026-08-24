@@ -8,7 +8,22 @@
     "status": "ON_SALE",
     "transmission": "MANUAL",
     "engineDisplacementCc": 1197,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 7.5,
+      "safety": 5.2,
+      "efficiency": 6.3,
+      "comfort": 7.8,
+      "value": 9.2,
+      "performance": 9.3,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "maruti-brezza-zxi-cng",
@@ -19,7 +34,22 @@
     "status": "ON_SALE",
     "transmission": "MANUAL",
     "engineDisplacementCc": 1462,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.2,
+      "safety": 5.4,
+      "efficiency": 7.9,
+      "comfort": 9.2,
+      "value": 9.3,
+      "performance": 8,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "maruti-fronx-alpha-turbo",
@@ -30,7 +60,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 998,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6,
+      "safety": 6.3,
+      "efficiency": 8.9,
+      "comfort": 9.5,
+      "value": 8.5,
+      "performance": 7,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "maruti-grand-vitara-strong-hybrid",
@@ -41,7 +86,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 1490,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.1,
+      "safety": 6.8,
+      "efficiency": 9.2,
+      "comfort": 9.5,
+      "value": 8,
+      "performance": 6.7,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "hyundai-creta-sx-tech-diesel",
@@ -52,7 +112,22 @@
     "status": "ON_SALE",
     "transmission": "MANUAL",
     "engineDisplacementCc": 1493,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.3,
+      "safety": 5.2,
+      "efficiency": 7.6,
+      "comfort": 9,
+      "value": 9.4,
+      "performance": 8.3,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   },
   {
     "id": "hyundai-creta-sx-o-turbo",
@@ -63,7 +138,22 @@
     "status": "ON_SALE",
     "transmission": "DCT",
     "engineDisplacementCc": 1482,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8.4,
+      "safety": 9.5,
+      "efficiency": 9.2,
+      "comfort": 7.3,
+      "value": 5.1,
+      "performance": 6.4,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   },
   {
     "id": "hyundai-i20-asta-opt",
@@ -74,7 +164,22 @@
     "status": "ON_SALE",
     "transmission": "CVT",
     "engineDisplacementCc": 1197,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6,
+      "safety": 5.8,
+      "efficiency": 8.5,
+      "comfort": 9.4,
+      "value": 8.9,
+      "performance": 7.4,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "tata-nexon-ev-empowered-plus-lr",
@@ -85,7 +190,22 @@
     "status": "ON_SALE",
     "transmission": "EV_DIRECT",
     "batteryCapacityKwh": 40.5,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6,
+      "safety": 6,
+      "efficiency": 8.6,
+      "comfort": 9.5,
+      "value": 8.8,
+      "performance": 7.3,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "tata-nexon-fearless-plus-s-dct",
@@ -96,7 +216,22 @@
     "status": "ON_SALE",
     "transmission": "DCT",
     "engineDisplacementCc": 1199,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 7.4,
+      "safety": 5.2,
+      "efficiency": 6.4,
+      "comfort": 7.8,
+      "value": 9.2,
+      "performance": 9.3,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "tata-punch-accomplished-dca",
@@ -107,7 +242,22 @@
     "status": "ON_SALE",
     "transmission": "AMT",
     "engineDisplacementCc": 1199,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.3,
+      "safety": 5.2,
+      "efficiency": 7.5,
+      "comfort": 9,
+      "value": 9.4,
+      "performance": 8.3,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   },
   {
     "id": "tata-tiago-ev-xz-plus",
@@ -118,7 +268,22 @@
     "status": "ON_SALE",
     "transmission": "EV_DIRECT",
     "batteryCapacityKwh": 24,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 7,
+      "safety": 8.4,
+      "efficiency": 9.8,
+      "comfort": 8.7,
+      "value": 6.4,
+      "performance": 6,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "tata-harrier-fearless-plus-at",
@@ -129,7 +294,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 1956,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8,
+      "safety": 9.3,
+      "efficiency": 9.5,
+      "comfort": 7.7,
+      "value": 5.3,
+      "performance": 6.2,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "mahindra-xuv700-ax7-l-diesel-at",
@@ -140,7 +320,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 2184,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.1,
+      "safety": 9.4,
+      "efficiency": 8.4,
+      "comfort": 6.6,
+      "value": 5,
+      "performance": 7,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   },
   {
     "id": "mahindra-thar-lx-4x4-diesel-mt",
@@ -151,7 +346,22 @@
     "status": "ON_SALE",
     "transmission": "MANUAL",
     "engineDisplacementCc": 2184,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8.7,
+      "safety": 6.3,
+      "efficiency": 6,
+      "comfort": 6.6,
+      "value": 7.9,
+      "performance": 9.4,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "mahindra-scorpio-n-z8-l-diesel-at",
@@ -162,7 +372,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 2184,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.1,
+      "safety": 5.5,
+      "efficiency": 8.1,
+      "comfort": 9.3,
+      "value": 9.2,
+      "performance": 7.8,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "kia-seltos-gtx-plus-turbo-dct",
@@ -173,7 +398,22 @@
     "status": "ON_SALE",
     "transmission": "DCT",
     "engineDisplacementCc": 1482,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.5,
+      "safety": 8.1,
+      "efficiency": 6.8,
+      "comfort": 6,
+      "value": 6.1,
+      "performance": 8.5,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "kia-sonet-htx-diesel-at",
@@ -184,7 +424,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 1493,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 7.1,
+      "safety": 8.6,
+      "efficiency": 9.8,
+      "comfort": 8.6,
+      "value": 6.2,
+      "performance": 6,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "toyota-innova-hycross-zx-opt",
@@ -195,7 +450,22 @@
     "status": "ON_SALE",
     "transmission": "CVT",
     "engineDisplacementCc": 1987,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.5,
+      "safety": 8.1,
+      "efficiency": 6.8,
+      "comfort": 6,
+      "value": 6.1,
+      "performance": 8.5,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "toyota-fortuner-legender-4x4-at",
@@ -206,7 +476,22 @@
     "status": "ON_SALE",
     "transmission": "AUTOMATIC",
     "engineDisplacementCc": 2755,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8.1,
+      "safety": 5.6,
+      "efficiency": 6,
+      "comfort": 7.2,
+      "value": 8.6,
+      "performance": 9.5,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "honda-city-zx-cvt",
@@ -217,7 +502,22 @@
     "status": "ON_SALE",
     "transmission": "CVT",
     "engineDisplacementCc": 1498,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9,
+      "safety": 9.4,
+      "efficiency": 8.5,
+      "comfort": 6.6,
+      "value": 5,
+      "performance": 7,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   },
   {
     "id": "honda-elevate-zx-cvt",
@@ -228,7 +528,22 @@
     "status": "ON_SALE",
     "transmission": "CVT",
     "engineDisplacementCc": 1498,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 7.6,
+      "safety": 5.3,
+      "efficiency": 6.2,
+      "comfort": 7.7,
+      "value": 9.1,
+      "performance": 9.4,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "mg-zs-ev-exclusive-plus",
@@ -239,7 +554,22 @@
     "status": "ON_SALE",
     "transmission": "EV_DIRECT",
     "batteryCapacityKwh": 50.3,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.3,
+      "safety": 7.4,
+      "efficiency": 6.4,
+      "comfort": 6.1,
+      "value": 6.8,
+      "performance": 9,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "mg-hector-sharp-pro-petrol-cvt",
@@ -250,7 +580,22 @@
     "status": "ON_SALE",
     "transmission": "CVT",
     "engineDisplacementCc": 1498,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8.8,
+      "safety": 6.5,
+      "efficiency": 6,
+      "comfort": 6.5,
+      "value": 7.7,
+      "performance": 9.4,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "skoda-slavia-15-tsi-style-dsg",
@@ -261,7 +606,22 @@
     "status": "ON_SALE",
     "transmission": "DCT",
     "engineDisplacementCc": 1498,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 8.8,
+      "safety": 6.4,
+      "efficiency": 6,
+      "comfort": 6.6,
+      "value": 7.8,
+      "performance": 9.4,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "vw-virtus-gt-plus-dsg",
@@ -272,7 +632,22 @@
     "status": "ON_SALE",
     "transmission": "DCT",
     "engineDisplacementCc": 1498,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.4,
+      "safety": 7.9,
+      "efficiency": 6.7,
+      "comfort": 6,
+      "value": 6.3,
+      "performance": 8.7,
+      "overall": 7.5,
+      "grade": "B+"
+    }
   },
   {
     "id": "byd-seal-premium",
@@ -283,7 +658,22 @@
     "status": "ON_SALE",
     "transmission": "EV_DIRECT",
     "batteryCapacityKwh": 82.5,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 6.5,
+      "safety": 7.7,
+      "efficiency": 9.7,
+      "comfort": 9.1,
+      "value": 7.1,
+      "performance": 6.2,
+      "overall": 7.7,
+      "grade": "B+"
+    }
   },
   {
     "id": "mahindra-xuv400-el-pro",
@@ -294,6 +684,21 @@
     "status": "ON_SALE",
     "transmission": "EV_DIRECT",
     "batteryCapacityKwh": 34.5,
-    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
+    "statusProvenance": {
+      "sourceType": "OEM_OFFICIAL",
+      "observedDate": "2024-05-01",
+      "verifiedDate": "2024-05-01",
+      "confidence": 100
+    },
+    "scores": {
+      "reliability": 9.2,
+      "safety": 9.3,
+      "efficiency": 8.2,
+      "comfort": 6.5,
+      "value": 5.1,
+      "performance": 7.2,
+      "overall": 7.6,
+      "grade": "B+"
+    }
   }
 ]
