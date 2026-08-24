@@ -6,13 +6,13 @@ export function ConfidenceBadge({ score }: { score: number }) {
   
   if (score >= 90) {
     label = 'OEM VERIFIED';
-    color = 'bg-primary-900/50 text-primary-400 border-primary-800';
+    color = 'bg-primary-500 text-[#0b131e] border-primary-500';
   } else if (score >= 70) {
     label = 'HIGH CONFIDENCE';
-    color = 'bg-emerald-900/50 text-emerald-400 border-emerald-800';
+    color = 'bg-[#1e293b] text-white border-slate-600';
   } else if (score >= 40) {
     label = 'ESTIMATE';
-    color = 'bg-amber-900/50 text-amber-400 border-amber-800';
+    color = 'bg-slate-800 text-primary-400 border-primary-900';
   }
   
   return (
