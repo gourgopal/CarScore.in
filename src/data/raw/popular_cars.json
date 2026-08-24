@@ -6,14 +6,9 @@
     "name": "Swift ZXi Plus",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "MANUAL",
-    "engineDisplacementCc": 1197
+    "engineDisplacementCc": 1197,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "maruti-brezza-zxi-cng",
@@ -22,14 +17,9 @@
     "name": "Brezza ZXi CNG",
     "powertrain": "CNG",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "MANUAL",
-    "engineDisplacementCc": 1462
+    "engineDisplacementCc": 1462,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "maruti-fronx-alpha-turbo",
@@ -38,14 +28,9 @@
     "name": "Fronx 1.0 Alpha Turbo AT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 998
+    "engineDisplacementCc": 998,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "maruti-grand-vitara-strong-hybrid",
@@ -54,14 +39,9 @@
     "name": "Grand Vitara Alpha Plus Strong Hybrid",
     "powertrain": "STRONG_HYBRID",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 1490
+    "engineDisplacementCc": 1490,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "hyundai-creta-sx-tech-diesel",
@@ -70,14 +50,9 @@
     "name": "Creta SX Tech Diesel MT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "MANUAL",
-    "engineDisplacementCc": 1493
+    "engineDisplacementCc": 1493,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "hyundai-creta-sx-o-turbo",
@@ -86,14 +61,9 @@
     "name": "Creta SX(O) 1.5 Turbo DCT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "DCT",
-    "engineDisplacementCc": 1482
+    "engineDisplacementCc": 1482,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "hyundai-i20-asta-opt",
@@ -102,14 +72,9 @@
     "name": "i20 Asta (O) 1.2 IVT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "CVT",
-    "engineDisplacementCc": 1197
+    "engineDisplacementCc": 1197,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "tata-nexon-ev-empowered-plus-lr",
@@ -118,14 +83,9 @@
     "name": "Nexon EV Empowered+ LR",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "EV_DIRECT",
-    "batteryCapacityKwh": 40.5
+    "batteryCapacityKwh": 40.5,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "tata-nexon-fearless-plus-s-dct",
@@ -134,14 +94,9 @@
     "name": "Nexon Fearless+ S DCT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "DCT",
-    "engineDisplacementCc": 1199
+    "engineDisplacementCc": 1199,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "tata-punch-accomplished-dca",
@@ -150,14 +105,9 @@
     "name": "Punch Accomplished DCA",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AMT",
-    "engineDisplacementCc": 1199
+    "engineDisplacementCc": 1199,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "tata-tiago-ev-xz-plus",
@@ -166,14 +116,9 @@
     "name": "Tiago EV XZ+ Long Range",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "EV_DIRECT",
-    "batteryCapacityKwh": 24
+    "batteryCapacityKwh": 24,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "tata-harrier-fearless-plus-at",
@@ -182,14 +127,9 @@
     "name": "Harrier Fearless+ AT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 1956
+    "engineDisplacementCc": 1956,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mahindra-xuv700-ax7-l-diesel-at",
@@ -198,14 +138,9 @@
     "name": "XUV700 AX7 L Diesel AT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 2184
+    "engineDisplacementCc": 2184,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mahindra-thar-lx-4x4-diesel-mt",
@@ -214,14 +149,9 @@
     "name": "Thar LX 4x4 Diesel MT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "MANUAL",
-    "engineDisplacementCc": 2184
+    "engineDisplacementCc": 2184,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mahindra-scorpio-n-z8-l-diesel-at",
@@ -230,14 +160,9 @@
     "name": "Scorpio-N Z8 L Diesel AT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 2184
+    "engineDisplacementCc": 2184,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "kia-seltos-gtx-plus-turbo-dct",
@@ -246,14 +171,9 @@
     "name": "Seltos GTX+ 1.5 Turbo DCT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "DCT",
-    "engineDisplacementCc": 1482
+    "engineDisplacementCc": 1482,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "kia-sonet-htx-diesel-at",
@@ -262,14 +182,9 @@
     "name": "Sonet HTX Diesel AT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 1493
+    "engineDisplacementCc": 1493,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "toyota-innova-hycross-zx-opt",
@@ -278,14 +193,9 @@
     "name": "Innova Hycross ZX(O) Hybrid",
     "powertrain": "STRONG_HYBRID",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "CVT",
-    "engineDisplacementCc": 1987
+    "engineDisplacementCc": 1987,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "toyota-fortuner-legender-4x4-at",
@@ -294,14 +204,9 @@
     "name": "Fortuner Legender 4x4 AT",
     "powertrain": "DIESEL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "AUTOMATIC",
-    "engineDisplacementCc": 2755
+    "engineDisplacementCc": 2755,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "honda-city-zx-cvt",
@@ -310,14 +215,9 @@
     "name": "City ZX CVT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "CVT",
-    "engineDisplacementCc": 1498
+    "engineDisplacementCc": 1498,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "honda-elevate-zx-cvt",
@@ -326,14 +226,9 @@
     "name": "Elevate ZX CVT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "CVT",
-    "engineDisplacementCc": 1498
+    "engineDisplacementCc": 1498,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mg-zs-ev-exclusive-plus",
@@ -342,14 +237,9 @@
     "name": "ZS EV Exclusive Plus",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "EV_DIRECT",
-    "batteryCapacityKwh": 50.3
+    "batteryCapacityKwh": 50.3,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mg-hector-sharp-pro-petrol-cvt",
@@ -358,14 +248,9 @@
     "name": "Hector Sharp Pro Petrol CVT",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "CVT",
-    "engineDisplacementCc": 1498
+    "engineDisplacementCc": 1498,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "skoda-slavia-15-tsi-style-dsg",
@@ -374,14 +259,9 @@
     "name": "Slavia 1.5 TSI Style DSG",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "DCT",
-    "engineDisplacementCc": 1498
+    "engineDisplacementCc": 1498,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "vw-virtus-gt-plus-dsg",
@@ -390,14 +270,9 @@
     "name": "Virtus GT Plus DSG",
     "powertrain": "PETROL",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "DCT",
-    "engineDisplacementCc": 1498
+    "engineDisplacementCc": 1498,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "byd-seal-premium",
@@ -406,14 +281,9 @@
     "name": "Seal Premium",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "EV_DIRECT",
-    "batteryCapacityKwh": 82.5
+    "batteryCapacityKwh": 82.5,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   },
   {
     "id": "mahindra-xuv400-el-pro",
@@ -422,13 +292,8 @@
     "name": "XUV400 EL Pro (34.5 kWh)",
     "powertrain": "ELECTRIC",
     "status": "ON_SALE",
-    "statusProvenance": {
-      "sourceType": "OEM_OFFICIAL",
-      "observedDate": "2024-05-01",
-      "verifiedDate": "2024-05-01",
-      "confidence": 100
-    },
     "transmission": "EV_DIRECT",
-    "batteryCapacityKwh": 34.5
+    "batteryCapacityKwh": 34.5,
+    "statusProvenance": { "sourceType": "OEM_OFFICIAL", "observedDate": "2024-05-01", "verifiedDate": "2024-05-01", "confidence": 100 }
   }
 ]

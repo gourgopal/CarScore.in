@@ -82,6 +82,7 @@ export const GenerationSchema = z.object({
 
 export const VariantSchema = z.object({
   id: z.string(), // Canonical slug, e.g. "maruti-suzuki-swift-zxi-plus-2024"
+  brand: z.string(),
   generationId: z.string(),
   name: z.string(),
   powertrain: Powertrain,
