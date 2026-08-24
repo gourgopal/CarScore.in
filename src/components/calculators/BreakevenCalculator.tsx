@@ -1,17 +1,18 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/Card';
 import { Input } from '../ui/Input';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export function BreakevenCalculator() {
-  const [icePrice, setIcePrice] = useState(1300000);
-  const [iceEfficiency, setIceEfficiency] = useState(15);
-  const [fuelPrice, setFuelPrice] = useState(100);
+  const [icePrice, setIcePrice] = useLocalStorage('cs_be_icePrice', 1300000);
+  const [iceEfficiency, setIceEfficiency] = useLocalStorage('cs_be_iceEfficiency', 15);
+  const [fuelPrice, setFuelPrice] = useLocalStorage('cs_be_fuelPrice', 103); // Today's average petrol price
 
-  const [evPrice, setEvPrice] = useState(1500000);
-  const [evEfficiency, setEvEfficiency] = useState(150); // Wh/km
-  const [electricityTariff, setElectricityTariff] = useState(8);
+  const [evPrice, setEvPrice] = useLocalStorage('cs_be_evPrice', 1500000);
+  const [evEfficiency, setEvEfficiency] = useLocalStorage('cs_be_evEfficiency', 150);
+  const [electricityTariff, setElectricityTariff] = useLocalStorage('cs_be_tariff', 8);
 
-  const [monthlyKm, setMonthlyKm] = useState(1200);
+  const [monthlyKm, setMonthlyKm] = useLocalStorage('cs_be_monthlyKm', 1200);
 
   const results = useMemo(() => {
     const priceDifference = evPrice - icePrice;

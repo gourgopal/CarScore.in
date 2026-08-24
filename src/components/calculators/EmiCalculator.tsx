@@ -1,14 +1,15 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { calculateEMI } from '../../domain/calculations';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export function EmiCalculator() {
-  const [onRoadPrice, setOnRoadPrice] = useState<number>(1000000);
-  const [downPayment, setDownPayment] = useState<number>(200000);
-  const [interestRate, setInterestRate] = useState<number>(8.5);
-  const [tenureMonths, setTenureMonths] = useState<number>(60);
-  const [processingFee, setProcessingFee] = useState<number>(5000);
+  const [onRoadPrice, setOnRoadPrice] = useLocalStorage('cs_emi_price', 1500000);
+  const [downPayment, setDownPayment] = useLocalStorage('cs_emi_dp', 300000);
+  const [interestRate, setInterestRate] = useLocalStorage('cs_emi_rate', 8.5);
+  const [tenureMonths, setTenureMonths] = useLocalStorage('cs_emi_months', 60);
+  const [processingFee, setProcessingFee] = useLocalStorage('cs_emi_fee', 5000);
 
   const results = useMemo(() => {
     return calculateEMI({

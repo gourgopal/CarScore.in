@@ -2,18 +2,19 @@ import React, { useState, useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { calculateEvChargingCost } from '../../domain/energy';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export function EvChargingCalculator() {
-  const [annualKm, setAnnualKm] = useState(15000);
-  const [consumptionWhPerKm, setConsumptionWhPerKm] = useState(150);
+  const [annualKm, setAnnualKm] = useLocalStorage('cs_ev_annualKm', 15000);
+  const [consumptionWhPerKm, setConsumptionWhPerKm] = useLocalStorage('cs_ev_efficiency', 150);
   
-  const [homePercent, setHomePercent] = useState(80);
-  const [acPercent, setAcPercent] = useState(10);
-  const [dcPercent, setDcPercent] = useState(10);
+  const [homePercent, setHomePercent] = useLocalStorage('cs_ev_homePercent', 80);
+  const [acPercent, setAcPercent] = useLocalStorage('cs_ev_acPercent', 10);
+  const [dcPercent, setDcPercent] = useLocalStorage('cs_ev_dcPercent', 10);
   
-  const [homeTariff, setHomeTariff] = useState(8);
-  const [acTariff, setAcTariff] = useState(15);
-  const [dcTariff, setDcTariff] = useState(22);
+  const [homeTariff, setHomeTariff] = useLocalStorage('cs_ev_homeTariff', 8);
+  const [acTariff, setAcTariff] = useLocalStorage('cs_ev_acTariff', 15);
+  const [dcTariff, setDcTariff] = useLocalStorage('cs_ev_dcTariff', 22);
 
   const results = useMemo(() => {
     try {

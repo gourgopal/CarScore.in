@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { ConfidenceBadge } from '../ui/Badge';
-import { Input } from '../ui/Input';
 import type { Variant } from '../../data/schemas';
 import { calculateEMI } from '../../domain/calculations';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 interface VariantConfig {
   variant: Variant;
@@ -19,7 +19,6 @@ const createDefaultConfig = (variant: Variant): VariantConfig => {
   const isEv = variant.powertrain === 'ELECTRIC';
   return {
     variant,
-    // Real implementation would pull this from DB. For now, mock based on powertrain if undefined
     acquisition: isEv ? 1500000 : 1300000,
     energyCostPerKm: isEv ? 1.2 : 6.5,
     annualMaintenance: isEv ? 5000 : 8000,
@@ -29,32 +28,36 @@ const createDefaultConfig = (variant: Variant): VariantConfig => {
 };
 
 export function TcoCompare() {
-  const [configs, setConfigs] = useState<VariantConfig[]>([]);
+  const [configs, setConfigs] = useLocalStorage<VariantConfig[]>('cs_tco_configs', []);
   const [allVariants, setAllVariants] = useState<Variant[]>([]);
   const [selectedToAdd, setSelectedToAdd] = useState<string>('');
   
   // Global assumptions
-  const [annualKm, setAnnualKm] = useState(15000);
-  const [years, setYears] = useState(5);
+  const [annualKm, setAnnualKm] = useLocalStorage('cs_tco_annualKm', 15000);
+  const [years, setYears] = useLocalStorage('cs_tco_years', 5);
   
   // Finance assumptions
-  const [isFinanced, setIsFinanced] = useState(true);
-  const [downPaymentPercent, setDownPaymentPercent] = useState(20);
-  const [interestRate, setInterestRate] = useState(8.6);
-  const [loanTenureYears, setLoanTenureYears] = useState(5);
+  const [isFinanced, setIsFinanced] = useLocalStorage('cs_tco_isFinanced', true);
+  const [downPaymentPercent, setDownPaymentPercent] = useLocalStorage('cs_tco_downpayment', 20);
+  const [interestRate, setInterestRate] = useLocalStorage('cs_tco_interest', 8.6);
+  const [loanTenureYears, setLoanTenureYears] = useLocalStorage('cs_tco_loanTenure', 5);
 
   useEffect(() => {
-    // Fetch the generated variants from the static folder
     fetch('/data/variants.json')
       .then(res => res.json())
       .then((data: Variant[]) => {
         setAllVariants(data);
         if (data.length > 0) {
-          // Initialize with first two variants if possible
-          setConfigs([
-            createDefaultConfig(data[0]),
-            ...(data.length > 1 ? [createDefaultConfig(data[1])] : [])
-          ]);
+          // Only auto-initialize if configs are empty (no local storage data yet)
+          setConfigs(prev => {
+            if (prev.length === 0) {
+              return [
+                createDefaultConfig(data[0]),
+                ...(data.length > 1 ? [createDefaultConfig(data[1])] : [])
+              ];
+            }
+            return prev;
+          });
           setSelectedToAdd(data[0].id);
         }
       })
@@ -156,13 +159,12 @@ export function TcoCompare() {
                 </div>
                 <div>
                   <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Loan Tenure (Yrs)</label>
-                  <select 
-                    className="w-24 rounded border border-slate-700 bg-[#0f1725] text-white px-3 py-2 text-sm font-medium focus:ring-1 focus:ring-primary-500 focus:outline-none"
+                  <input 
+                    type="number" step="0.1" min="0.1"
+                    className="w-24 rounded border border-slate-700 bg-[#0f1725] text-white px-3 py-2 text-sm font-medium focus:ring-1 focus:ring-primary-500 focus:outline-none" 
                     value={loanTenureYears}
                     onChange={(e) => setLoanTenureYears(Number(e.target.value))}
-                  >
-                    {[1,2,3,4,5,6,7,8].map(y => <option key={y} value={y} className="bg-[#0f1725] text-white">{y}</option>)}
-                  </select>
+                  />
                 </div>
               </>
             )}

@@ -1,13 +1,14 @@
-import React, { useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { calculateIceFuelCost, calculateCngFuelCost } from '../../domain/energy';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export function FuelCalculator() {
-  const [fuelType, setFuelType] = useState<'PETROL' | 'DIESEL' | 'CNG'>('PETROL');
-  const [annualKm, setAnnualKm] = useState(15000);
-  const [efficiency, setEfficiency] = useState(15);
-  const [price, setPrice] = useState(100);
+  const [fuelType, setFuelType] = useLocalStorage<'PETROL' | 'DIESEL' | 'CNG'>('cs_fuel_type', 'PETROL');
+  const [annualKm, setAnnualKm] = useLocalStorage('cs_fuel_annualKm', 15000);
+  const [efficiency, setEfficiency] = useLocalStorage('cs_fuel_efficiency', 15);
+  const [price, setPrice] = useLocalStorage('cs_fuel_price', 100);
 
   const results = useMemo(() => {
     if (fuelType === 'CNG') {
