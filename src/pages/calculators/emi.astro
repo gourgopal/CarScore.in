@@ -7,13 +7,13 @@ import { EmiCalculator } from '../../components/calculators/EmiCalculator';
 	title="Car EMI Calculator India" 
 	description="Calculate your car loan EMI, total interest, and total repayment using the reducing-balance method."
 >
-	<div class="bg-white border-b border-slate-200">
+	<div class="bg-[#0b131e] border-b border-slate-800">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 			<div class="max-w-3xl">
-				<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+				<h1 class="text-4xl font-serif font-extrabold text-white tracking-tight sm:text-5xl">
 					Car EMI Calculator
 				</h1>
-				<p class="mt-4 text-lg text-slate-500 font-medium">
+				<p class="mt-4 text-lg text-slate-400 font-medium">
 					Find out your exact monthly payment, principal amount, and total interest cost using the standard reducing-balance formula utilized by Indian banks.
 				</p>
 			</div>
@@ -21,18 +21,32 @@ import { EmiCalculator } from '../../components/calculators/EmiCalculator';
 	</div>
 
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<div class="mb-16">
-			<EmiCalculator client:load />
+		<EmiCalculator client:load />
+
+		<div class="mt-16 border-t border-slate-800 pt-12">
+			<h3 class="text-2xl font-serif font-bold text-white mb-6">Next Steps</h3>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+				<a href="/calculators/affordability" class="group bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors">
+					<p class="text-[10px] font-bold text-primary-500 uppercase tracking-widest mb-2">Check Health</p>
+					<h4 class="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">Affordability Check</h4>
+					<p class="text-sm text-slate-400">Is this EMI safely within your monthly budget based on the 20/4/10 rule?</p>
+				</a>
+				<a href="/calculators/fuel-cost" class="group bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors">
+					<p class="text-[10px] font-bold text-primary-500 uppercase tracking-widest mb-2">Hidden Costs</p>
+					<h4 class="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">Fuel Efficiency</h4>
+					<p class="text-sm text-slate-400">Don't forget running costs! Calculate how much petrol will cost you every month.</p>
+				</a>
+			</div>
 		</div>
 
-		<div class="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
-			<h2 class="text-xl font-bold text-slate-900">Methodology & Assumptions</h2>
-			<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-600">
+		<div class="mt-16 bg-[#111a2a] rounded-xl border border-slate-700 p-8 shadow-sm">
+			<h2 class="text-xl font-serif font-bold text-white">Methodology & Assumptions</h2>
+			<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-400">
 				<div>
-					<p class="mb-4 font-medium">
+					<p class="mb-4 font-medium text-slate-300">
 						We use the standard reducing-balance method to calculate your Equated Monthly Installment (EMI).
 					</p>
-					<pre class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs font-mono mt-4 overflow-x-auto text-slate-800">
+					<pre class="bg-[#0b131e] p-4 rounded-lg border border-slate-700 text-xs font-mono mt-4 overflow-x-auto text-primary-400">
 EMI = [P x R x (1+R)^N] / [(1+R)^N - 1]
 
 P = Principal loan amount
@@ -41,17 +55,17 @@ N = Loan tenure in months
 					</pre>
 				</div>
 				<div>
-					<ul class="space-y-3 font-medium">
+					<ul class="space-y-3 font-medium text-slate-300">
 						<li class="flex gap-2">
-							<span class="text-blue-500">•</span>
+							<span class="text-primary-500">•</span>
 							Calculations assume a fixed interest rate throughout the tenure.
 						</li>
 						<li class="flex gap-2">
-							<span class="text-blue-500">•</span>
+							<span class="text-primary-500">•</span>
 							Processing fees are added to the total cost but are typically paid upfront, not capitalized into the loan principal unless requested from your bank.
 						</li>
 						<li class="flex gap-2">
-							<span class="text-blue-500">•</span>
+							<span class="text-primary-500">•</span>
 							Actual bank EMIs might differ slightly due to rounding rules or specific daily-reducing balance implementations.
 						</li>
 					</ul>

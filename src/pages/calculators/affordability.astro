@@ -25,5 +25,21 @@ import { AffordabilityCalculator } from '../../components/calculators/Affordabil
 
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<AffordabilityCalculator client:load />
+		
+		<div class="mt-16 border-t border-slate-800 pt-12">
+			<h3 class="text-2xl font-serif font-bold text-white mb-6">Next Steps</h3>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+				<a href="/find-my-match" class="group bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors">
+					<p class="text-[10px] font-bold text-primary-500 uppercase tracking-widest mb-2">Explore</p>
+					<h4 class="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">Find My Match</h4>
+					<p class="text-sm text-slate-400">Now that you know your budget, find cars that perfectly fit your target.</p>
+				</a>
+				<a href="/calculators/emi" class="group bg-[#111a2a] p-6 rounded-lg border border-slate-700 hover:border-primary-500 transition-colors">
+					<p class="text-[10px] font-bold text-primary-500 uppercase tracking-widest mb-2">Deep Dive</p>
+					<h4 class="text-lg font-bold text-white mb-2 group-hover:text-primary-400 transition-colors">Calculate Exact EMI</h4>
+					<p class="text-sm text-slate-400">Ready to buy? Break down the exact principal and interest for your loan.</p>
+				</a>
+			</div>
+		</div>
 	</div>
 </Layout>
