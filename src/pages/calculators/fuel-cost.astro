@@ -5,20 +5,22 @@ import { FuelCalculator } from '../../components/calculators/FuelCalculator';
 
 <Layout 
 	title="Car Fuel Cost Calculator India" 
-	description="Calculate the true monthly and annual fuel cost for your Petrol, Diesel, or CNG car based on your exact usage and local fuel prices."
+	description="Calculate the true monthly and annual fuel cost for your Petrol, Diesel, or CNG car."
 >
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<div class="mb-10 max-w-3xl">
-			<h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-				Fuel Cost Calculator
-			</h1>
-			<p class="mt-4 text-lg text-gray-500">
-				Calculate exactly how much you'll spend on fuel every month and year. Adjust the mileage to match real-world conditions rather than just laboratory claims.
-			</p>
+	<div class="bg-white border-b border-slate-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="max-w-3xl">
+				<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+					Fuel Cost Calculator
+				</h1>
+				<p class="mt-4 text-lg text-slate-500 font-medium">
+					Calculate exactly how much you'll spend on fuel every month and year. Adjust the mileage to match real-world conditions rather than just laboratory claims.
+				</p>
+			</div>
 		</div>
+	</div>
 
-		<div class="mb-12">
-			<FuelCalculator client:load />
-		</div>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<FuelCalculator client:load />
 	</div>
 </Layout>

@@ -31,17 +31,17 @@ export function FuelCalculator() {
     new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div className="lg:col-span-1 space-y-4">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+      <div className="xl:col-span-1 space-y-4">
         <Card>
           <CardHeader>
-            <CardTitle>Fuel Variables</CardTitle>
+            <CardTitle>Usage & Pricing</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Fuel Type</label>
+              <label className="block text-xs font-bold text-slate-700 mb-1.5 uppercase tracking-wide">Fuel Type</label>
               <select 
-                className="flex h-10 w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm"
+                className="flex h-10 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 value={fuelType}
                 onChange={(e) => setFuelType(e.target.value as any)}
               >
@@ -57,13 +57,13 @@ export function FuelCalculator() {
               onChange={(e) => setAnnualKm(Number(e.target.value))} 
             />
             <Input 
-              label={`Efficiency (km/${fuelType === 'CNG' ? 'kg' : 'l'})`} 
+              label={`Real-World Efficiency (km/${fuelType === 'CNG' ? 'kg' : 'l'})`} 
               type="number" 
               value={efficiency} 
               onChange={(e) => setEfficiency(Number(e.target.value))}
             />
             <Input 
-              label={`Price (₹/${fuelType === 'CNG' ? 'kg' : 'l'})`} 
+              label={`Fuel Price (₹/${fuelType === 'CNG' ? 'kg' : 'l'})`} 
               type="number" 
               value={price} 
               onChange={(e) => setPrice(Number(e.target.value))} 
@@ -72,18 +72,18 @@ export function FuelCalculator() {
         </Card>
       </div>
 
-      <div className="lg:col-span-2 space-y-4">
-        <Card className="bg-blue-50 border-blue-100 h-full flex flex-col justify-center">
-          <CardContent className="p-8 text-center space-y-8">
+      <div className="xl:col-span-2 space-y-6">
+        <Card className="bg-slate-900 border-slate-800 text-white h-full flex flex-col justify-center">
+          <CardContent className="p-10 text-center space-y-10">
             <div>
-              <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide">Annual Fuel Cost</h3>
-              <p className="mt-2 text-5xl font-extrabold text-blue-900">{formatCurrency(results.totalCost)}</p>
-              <p className="text-sm text-blue-700 mt-2">({formatCurrency(results.totalCost / 12)} per month)</p>
+              <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Annual Fuel Cost</h3>
+              <p className="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight">{formatCurrency(results.totalCost)}</p>
+              <p className="text-sm text-slate-400 font-medium mt-3">That is {formatCurrency(results.totalCost / 12)} per month</p>
             </div>
             
-            <div className="pt-6 border-t border-blue-200">
-              <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide">Fuel Consumed</h3>
-              <p className="mt-2 text-2xl font-bold text-blue-900">{Math.round(results.totalUnits).toLocaleString('en-IN')} {results.unit}</p>
+            <div className="pt-8 border-t border-slate-800/50">
+              <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Total Fuel Consumed</h3>
+              <p className="mt-3 text-2xl font-bold text-white">{Math.round(results.totalUnits).toLocaleString('en-IN')} {results.unit}</p>
             </div>
           </CardContent>
         </Card>

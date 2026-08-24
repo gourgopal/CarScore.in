@@ -5,14 +5,12 @@ import { calculateEvChargingCost } from '../../domain/energy';
 
 export function EvChargingCalculator() {
   const [annualKm, setAnnualKm] = useState(15000);
-  const [consumptionWhPerKm, setConsumptionWhPerKm] = useState(150); // Wh/km
+  const [consumptionWhPerKm, setConsumptionWhPerKm] = useState(150);
   
-  // Ratios summing to 100
   const [homePercent, setHomePercent] = useState(80);
   const [acPercent, setAcPercent] = useState(10);
   const [dcPercent, setDcPercent] = useState(10);
   
-  // Tariffs
   const [homeTariff, setHomeTariff] = useState(8);
   const [acTariff, setAcTariff] = useState(15);
   const [dcTariff, setDcTariff] = useState(22);
@@ -41,13 +39,13 @@ export function EvChargingCalculator() {
   const isValidRatio = (homePercent + acPercent + dcPercent) === 100;
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div className="lg:col-span-1 space-y-4">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
+      <div className="xl:col-span-1 space-y-6">
         <Card>
           <CardHeader>
             <CardTitle>EV Profile</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-5">
             <Input 
               label="Annual Distance (km)" 
               type="number" 
@@ -67,9 +65,9 @@ export function EvChargingCalculator() {
           <CardHeader>
             <CardTitle>Charging Mix & Tariffs</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-5">
             {!isValidRatio && (
-              <p className="text-sm text-red-600 font-medium bg-red-50 p-2 rounded">
+              <p className="text-xs text-red-700 font-bold bg-red-50 p-3 rounded-lg border border-red-200">
                 Percentages must sum exactly to 100%. Current sum: {homePercent + acPercent + dcPercent}%
               </p>
             )}
@@ -108,31 +106,31 @@ export function EvChargingCalculator() {
         </Card>
       </div>
 
-      <div className="lg:col-span-2 space-y-4">
+      <div className="xl:col-span-2 space-y-6">
         {results ? (
-          <Card className="bg-green-50 border-green-100 h-full flex flex-col justify-center">
-            <CardContent className="p-8 text-center space-y-8">
+          <Card className="bg-slate-900 border-slate-800 text-white h-full flex flex-col justify-center">
+            <CardContent className="p-10 text-center space-y-10">
               <div>
-                <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">Annual Charging Cost</h3>
-                <p className="mt-2 text-5xl font-extrabold text-green-900">{formatCurrency(results.annualChargingCost)}</p>
-                <p className="text-sm text-green-700 mt-2">({formatCurrency(results.annualChargingCost / 12)} per month)</p>
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Annual Charging Cost</h3>
+                <p className="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight">{formatCurrency(results.annualChargingCost)}</p>
+                <p className="text-sm text-slate-400 font-medium mt-3">That is {formatCurrency(results.annualChargingCost / 12)} per month</p>
               </div>
               
-              <div className="pt-6 border-t border-green-200 grid grid-cols-2 gap-4">
+              <div className="pt-8 border-t border-slate-800/50 grid grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">Vehicle Energy</h3>
-                  <p className="mt-1 text-2xl font-bold text-green-900">{Math.round(results.vehicleEnergyKwh).toLocaleString('en-IN')} kWh</p>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Battery Energy</h3>
+                  <p className="mt-2 text-2xl font-bold text-white">{Math.round(results.vehicleEnergyKwh).toLocaleString('en-IN')} kWh</p>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">Grid Energy (10% Loss)</h3>
-                  <p className="mt-1 text-2xl font-bold text-green-900">{Math.round(results.gridEnergyKwh).toLocaleString('en-IN')} kWh</p>
+                  <h3 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Grid Energy (10% Loss)</h3>
+                  <p className="mt-2 text-2xl font-bold text-slate-300">{Math.round(results.gridEnergyKwh).toLocaleString('en-IN')} kWh</p>
                 </div>
               </div>
             </CardContent>
           </Card>
         ) : (
-          <Card className="h-full flex items-center justify-center bg-gray-50 border-dashed">
-            <p className="text-gray-500 font-medium">Please fix the charging mix percentages.</p>
+          <Card className="h-full flex items-center justify-center bg-slate-50 border-dashed border-2 border-slate-300">
+            <p className="text-slate-500 font-bold text-sm uppercase tracking-wide">Please fix the charging mix percentages</p>
           </Card>
         )}
       </div>

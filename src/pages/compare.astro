@@ -7,41 +7,47 @@ import { TcoCompare } from '../components/calculators/TcoCompare';
 	title="Compare Car Ownership Costs (TCO)" 
 	description="Compare the real total cost of ownership between ICE, CNG, and Electric cars. Understand fuel costs, depreciation, and maintenance."
 >
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
-			<div class="max-w-3xl">
-				<h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-					Compare Total Cost of Ownership
-				</h1>
-				<p class="mt-4 text-lg text-gray-500">
-					Compare the real-world financial impact of different vehicles. We calculate exact running costs based on your usage, plus depreciation, insurance, and service.
-				</p>
-			</div>
-			<div class="flex-shrink-0 flex gap-2">
-				<button class="text-sm font-medium text-blue-600 hover:text-blue-800 bg-blue-50 px-3 py-2 rounded-md">Edit Assumptions</button>
+	<div class="bg-white border-b border-slate-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+				<div class="max-w-3xl">
+					<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+						Compare Total Cost of Ownership
+					</h1>
+					<p class="mt-4 text-lg text-slate-500 font-medium">
+						Compare the real-world financial impact of different vehicles. We calculate exact running costs based on your usage, plus depreciation, insurance, and service.
+					</p>
+				</div>
+				<div class="flex-shrink-0">
+					<a href="/methodology/total-cost-of-ownership" class="inline-flex items-center text-sm font-bold text-blue-600 hover:text-blue-800 bg-blue-50 px-4 py-2 rounded-lg transition-colors">
+						View Methodology &rarr;
+					</a>
+				</div>
 			</div>
 		</div>
+	</div>
 
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 		<!-- Interactive Client Island -->
 		<TcoCompare client:load />
 
-		<div class="mt-16 bg-gray-50 rounded-lg p-8 border border-gray-200">
-			<h2 class="text-xl font-bold text-gray-900 mb-4">How we calculate Economic TCO</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-600">
+		<div class="mt-20 bg-slate-900 rounded-2xl p-8 sm:p-12 border border-slate-800 shadow-xl">
+			<h2 class="text-2xl font-bold text-white mb-6">How we calculate Economic TCO</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-slate-400 font-medium leading-relaxed">
 				<div>
 					<p class="mb-4">
 						Economic Total Cost of Ownership represents the actual net wealth you lose by owning and operating the vehicle over the selected period.
 					</p>
 					<p>
-						<strong>Included:</strong> Acquisition price (on-road), interest paid on loans, all energy (fuel/charging) consumed, scheduled servicing, insurance renewals, and estimated resale depreciation.
+						<strong class="text-white">Included:</strong> Acquisition price (on-road), interest paid on loans, all energy (fuel/charging) consumed, scheduled servicing, insurance renewals, and estimated resale depreciation.
 					</p>
 				</div>
 				<div>
 					<p class="mb-4">
-						We do <strong>not</strong> double-count loan principal. The principal is simply paying off the acquisition cost of the asset. We only penalize the TCO for the <em>interest and fees</em> paid to the bank.
+						We do <strong class="text-white">not</strong> double-count loan principal. The principal is simply paying off the acquisition cost of the asset. We only penalize the TCO for the <em>interest and fees</em> paid to the bank.
 					</p>
-					<p>
-						<a href="/methodology/total-cost-of-ownership" class="text-blue-600 hover:underline">Read the full mathematical methodology &rarr;</a>
+					<p class="mt-6">
+						<a href="/methodology/total-cost-of-ownership" class="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-sm font-bold rounded-lg text-white bg-slate-800 hover:bg-slate-700 transition-colors">Read full methodology</a>
 					</p>
 				</div>
 			</div>

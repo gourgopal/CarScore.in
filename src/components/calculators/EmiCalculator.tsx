@@ -1,7 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '../ui/Card';
+import { Card, CardHeader, CardTitle, CardContent } from '../ui/Card';
 import { Input } from '../ui/Input';
-import { Button } from '../ui/Button';
 import { calculateEMI } from '../../domain/calculations';
 
 export function EmiCalculator() {
@@ -25,14 +24,14 @@ export function EmiCalculator() {
     new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
       {/* Inputs */}
-      <div className="lg:col-span-1 space-y-4">
+      <div className="xl:col-span-1 space-y-4">
         <Card>
           <CardHeader>
-            <CardTitle>Loan Details</CardTitle>
+            <CardTitle>Loan Parameters</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-5">
             <Input 
               label="On-Road Price (₹)" 
               type="number" 
@@ -48,21 +47,23 @@ export function EmiCalculator() {
               min={0}
               max={onRoadPrice}
             />
-            <Input 
-              label="Interest Rate (%)" 
-              type="number" 
-              step="0.1"
-              value={interestRate} 
-              onChange={(e) => setInterestRate(Number(e.target.value))} 
-              min={0}
-            />
-            <Input 
-              label="Tenure (Months)" 
-              type="number" 
-              value={tenureMonths} 
-              onChange={(e) => setTenureMonths(Number(e.target.value))} 
-              min={1}
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <Input 
+                label="Interest (%)" 
+                type="number" 
+                step="0.1"
+                value={interestRate} 
+                onChange={(e) => setInterestRate(Number(e.target.value))} 
+                min={0}
+              />
+              <Input 
+                label="Months" 
+                type="number" 
+                value={tenureMonths} 
+                onChange={(e) => setTenureMonths(Number(e.target.value))} 
+                min={1}
+              />
+            </div>
             <Input 
               label="Processing Fee (₹)" 
               type="number" 
@@ -75,31 +76,31 @@ export function EmiCalculator() {
       </div>
 
       {/* Results */}
-      <div className="lg:col-span-2 space-y-4">
-        <Card className="bg-blue-50 border-blue-100">
-          <CardContent className="p-8 text-center">
-            <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide">Estimated Monthly EMI</h3>
-            <p className="mt-2 text-5xl font-extrabold text-blue-900">{formatCurrency(results.emi)}</p>
+      <div className="xl:col-span-2 space-y-6">
+        <Card className="bg-slate-900 border-slate-800 text-white">
+          <CardContent className="p-10 flex flex-col items-center justify-center text-center h-full">
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Monthly EMI</h3>
+            <p className="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-white">{formatCurrency(results.emi)}</p>
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card>
-            <CardContent className="p-6 text-center">
-              <p className="text-sm text-gray-500 font-medium">Principal Amount</p>
-              <p className="mt-1 text-xl font-bold text-gray-900">{formatCurrency(results.principal)}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <Card className="bg-white">
+            <CardContent className="p-6">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Principal</p>
+              <p className="mt-2 text-2xl font-bold text-slate-900">{formatCurrency(results.principal)}</p>
             </CardContent>
           </Card>
-          <Card>
-            <CardContent className="p-6 text-center">
-              <p className="text-sm text-gray-500 font-medium">Total Interest</p>
-              <p className="mt-1 text-xl font-bold text-gray-900">{formatCurrency(results.totalInterest)}</p>
+          <Card className="bg-white">
+            <CardContent className="p-6">
+              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Total Interest</p>
+              <p className="mt-2 text-2xl font-bold text-slate-900">{formatCurrency(results.totalInterest)}</p>
             </CardContent>
           </Card>
-          <Card>
-            <CardContent className="p-6 text-center">
-              <p className="text-sm text-gray-500 font-medium">Total Payment</p>
-              <p className="mt-1 text-xl font-bold text-gray-900">{formatCurrency(results.totalRepayments + results.fees)}</p>
+          <Card className="bg-white border-blue-200 shadow-sm ring-1 ring-blue-50">
+            <CardContent className="p-6">
+              <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Total Outflow</p>
+              <p className="mt-2 text-2xl font-bold text-blue-900">{formatCurrency(results.totalRepayments + results.fees)}</p>
             </CardContent>
           </Card>
         </div>

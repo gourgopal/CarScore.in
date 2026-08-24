@@ -5,27 +5,35 @@ import Layout from '../../layouts/Layout.astro';
 <Layout 
 	title="Methodology: Total Cost of Ownership" 
 >
-	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose prose-blue">
-		<h1>Total Cost of Ownership Methodology</h1>
-		<p class="lead">
-			CarScore.in separates Total Cash Outflow from Economic Total Cost of Ownership to prevent double-counting of asset equity.
-		</p>
+	<div class="bg-white border-b border-slate-200">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+				Total Cost of Ownership Methodology
+			</h1>
+			<p class="mt-4 text-lg text-slate-500 font-medium">
+				How CarScore.in separates Total Cash Outflow from Economic Total Cost of Ownership to prevent double-counting of asset equity.
+			</p>
+		</div>
+	</div>
 
-		<h2>Economic TCO Formula</h2>
-		<pre>
-Economic TCO = 
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="prose prose-slate prose-lg">
+			<h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Economic TCO Formula</h2>
+			<div class="bg-slate-900 rounded-xl p-6 shadow-md mb-8">
+				<pre class="text-blue-400 font-mono text-sm m-0"><code>Economic TCO = 
   Acquisition Price (On-Road)
   + Finance Interest & Fees
   + Total Insurance Premiums
   + Total Energy (Fuel/Charging)
   + Scheduled Servicing & Repairs
   + Consumables (Tyres/Battery)
-  - Expected Resale Value
-		</pre>
+  - Expected Resale Value</code></pre>
+			</div>
 
-		<h2>Distance Normalization</h2>
-		<p>
-			All distance inputs (daily, monthly) are strictly normalized to an annual kilometre figure to align with standard Indian insurance and service schedules.
-		</p>
+			<h2 class="text-2xl font-bold text-slate-900 mt-8 mb-4">Distance Normalization</h2>
+			<p class="text-slate-600 font-medium leading-relaxed">
+				All distance inputs (daily, monthly) are strictly normalized to an annual kilometre figure to align with standard Indian insurance and service schedules. This allows us to accurately estimate tyre replacements, battery degradation, and scheduled maintenance intervals.
+			</p>
+		</div>
 	</div>
 </Layout>

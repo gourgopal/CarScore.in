@@ -5,42 +5,58 @@ import { EmiCalculator } from '../../components/calculators/EmiCalculator';
 
 <Layout 
 	title="Car EMI Calculator India" 
-	description="Calculate your car loan EMI, total interest, and total repayment using the reducing-balance method. Transparent and independent."
+	description="Calculate your car loan EMI, total interest, and total repayment using the reducing-balance method."
 >
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-		<div class="mb-10 max-w-3xl">
-			<h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-				Car EMI Calculator
-			</h1>
-			<p class="mt-4 text-lg text-gray-500">
-				Find out your exact monthly payment, principal amount, and total interest cost. Our calculator uses the standard reducing-balance formula utilized by Indian banks.
-			</p>
+	<div class="bg-white border-b border-slate-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="max-w-3xl">
+				<h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+					Car EMI Calculator
+				</h1>
+				<p class="mt-4 text-lg text-slate-500 font-medium">
+					Find out your exact monthly payment, principal amount, and total interest cost using the standard reducing-balance formula utilized by Indian banks.
+				</p>
+			</div>
 		</div>
+	</div>
 
-		<div class="mb-12">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="mb-16">
 			<EmiCalculator client:load />
 		</div>
 
-		<div class="prose max-w-none text-gray-600 mt-16 border-t border-gray-200 pt-10">
-			<h2>How is the Car EMI calculated?</h2>
-			<p>
-				We use the standard reducing-balance method to calculate your Equated Monthly Installment (EMI). The formula is:
-			</p>
-			<pre class="bg-gray-100 p-4 rounded-md text-sm mt-4 overflow-x-auto">
+		<div class="bg-white rounded-xl border border-slate-200 p-8 shadow-sm">
+			<h2 class="text-xl font-bold text-slate-900">Methodology & Assumptions</h2>
+			<div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-600">
+				<div>
+					<p class="mb-4 font-medium">
+						We use the standard reducing-balance method to calculate your Equated Monthly Installment (EMI).
+					</p>
+					<pre class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-xs font-mono mt-4 overflow-x-auto text-slate-800">
 EMI = [P x R x (1+R)^N] / [(1+R)^N - 1]
 
-Where:
 P = Principal loan amount
 R = Monthly interest rate (Annual Rate / 12 / 100)
 N = Loan tenure in months
-			</pre>
-			
-			<h3 class="mt-8">Assumptions & Limitations</h3>
-			<ul>
-				<li>Calculations assume a fixed interest rate throughout the tenure.</li>
-				<li>Processing fees are added to the total cost but are typically paid upfront, not capitalized into the loan principal unless requested from your bank.</li>
-				<li>Actual bank EMIs might differ slightly due to rounding rules or specific daily-reducing balance implementations.</li>
-			</ul>
+					</pre>
+				</div>
+				<div>
+					<ul class="space-y-3 font-medium">
+						<li class="flex gap-2">
+							<span class="text-blue-500">•</span>
+							Calculations assume a fixed interest rate throughout the tenure.
+						</li>
+						<li class="flex gap-2">
+							<span class="text-blue-500">•</span>
+							Processing fees are added to the total cost but are typically paid upfront, not capitalized into the loan principal unless requested from your bank.
+						</li>
+						<li class="flex gap-2">
+							<span class="text-blue-500">•</span>
+							Actual bank EMIs might differ slightly due to rounding rules or specific daily-reducing balance implementations.
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </Layout>
