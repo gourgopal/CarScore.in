@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Preview deployments on Cloudflare typically use *.pages.dev
+# We should probably block those if they exist, but normally CF provides a custom header.
+# For now, allow everything on the main production site.
+
+Sitemap: https://www.carscore.in/sitemap-index.xml

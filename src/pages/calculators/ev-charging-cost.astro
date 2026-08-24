@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { EvChargingCalculator } from '../../components/calculators/EvChargingCalculator';
+---
+
+<Layout 
+	title="EV Charging Cost Calculator India" 
+	description="Calculate the true running cost of an Electric Vehicle based on your mix of home charging, public AC, and fast DC charging."
+>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+		<div class="mb-10 max-w-3xl">
+			<h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
+				EV Charging Cost Calculator
+			</h1>
+			<p class="mt-4 text-lg text-gray-500">
+				EVs are cheap to run at home, but expensive on the highway. See your true running costs by blending your home, public AC, and fast DC charging behaviour.
+			</p>
+		</div>
+
+		<div class="mb-12">
+			<EvChargingCalculator client:load />
+		</div>
+	</div>
+</Layout>

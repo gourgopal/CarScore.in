@@ -2,7 +2,7 @@
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"compatibility_date": "2026-08-24",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "cosmic-crater",
+	"name": "carscore",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
 		"directory": "./dist",
