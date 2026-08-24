@@ -41,6 +41,7 @@ export function TcoCompare() {
   const [isFinanced, setIsFinanced] = useState(true);
   const [downPaymentPercent, setDownPaymentPercent] = useState(20);
   const [interestRate, setInterestRate] = useState(8.6);
+  const [loanTenureYears, setLoanTenureYears] = useState(5);
 
   useEffect(() => {
     // Fetch the generated variants from the static folder
@@ -153,6 +154,16 @@ export function TcoCompare() {
                     onChange={(e) => setInterestRate(Number(e.target.value))}
                   />
                 </div>
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Loan Tenure (Yrs)</label>
+                  <select 
+                    className="w-24 rounded border border-slate-700 bg-[#0f1725] text-white px-3 py-2 text-sm font-medium focus:ring-1 focus:ring-primary-500 focus:outline-none"
+                    value={loanTenureYears}
+                    onChange={(e) => setLoanTenureYears(Number(e.target.value))}
+                  >
+                    {[1,2,3,4,5,6,7,8].map(y => <option key={y} value={y} className="bg-[#0f1725] text-white">{y}</option>)}
+                  </select>
+                </div>
               </>
             )}
           </div>
@@ -193,13 +204,12 @@ export function TcoCompare() {
           
           let financeInterest = 0;
           if (isFinanced) {
-            const loanTenure = Math.min(years * 12, 84); 
             const downPayment = acquisition * (downPaymentPercent / 100);
             const loanResults = calculateEMI({
               onRoadPrice: acquisition,
               downPayment: downPayment,
               annualInterestRate: interestRate,
-              tenureInMonths: loanTenure,
+              tenureInMonths: loanTenureYears * 12,
               processingFee: 0 // Simplification for TCO comparison
             });
             financeInterest = loanResults.totalInterest;
