@@ -6,28 +6,51 @@ import { sampleVariant1, sampleVariant2 } from '../../data/fixtures';
 import type { Variant } from '../../data/schemas';
 import { calculateEMI } from '../../domain/calculations';
 
-// A mock database of variants just for demonstration of the "Add Car" button
 const availableVariants: Variant[] = [
   sampleVariant1,
   sampleVariant2,
   {
     ...sampleVariant1,
     id: 'maruti-fronx-turbo',
-    name: 'Maruti Fronx 1.0 Turbo Alpha',
+    name: 'Maruti Fronx 1.0 Turbo',
     brand: 'MARUTI',
     powertrain: 'PETROL',
   },
   {
     ...sampleVariant2,
     id: 'mg-zs-ev',
-    name: 'MG ZS EV Exclusive Plus',
+    name: 'MG ZS EV Exclusive',
     brand: 'MG',
     powertrain: 'ELECTRIC',
   }
 ];
 
+interface VariantConfig {
+  variant: Variant;
+  acquisition: number;
+  energyCostPerKm: number;
+  annualMaintenance: number;
+  annualInsurance: number;
+  resalePercentage: number;
+}
+
+const createDefaultConfig = (variant: Variant): VariantConfig => {
+  const isEv = variant.powertrain === 'ELECTRIC';
+  return {
+    variant,
+    acquisition: isEv ? 1500000 : 1300000,
+    energyCostPerKm: isEv ? 1.2 : 6.5,
+    annualMaintenance: isEv ? 5000 : 8000,
+    annualInsurance: isEv ? 25000 : 20000,
+    resalePercentage: isEv ? 45 : 55,
+  };
+};
+
 export function TcoCompare() {
-  const [selectedVariants, setSelectedVariants] = useState<Variant[]>([sampleVariant1, sampleVariant2]);
+  const [configs, setConfigs] = useState<VariantConfig[]>([
+    createDefaultConfig(sampleVariant1),
+    createDefaultConfig(sampleVariant2)
+  ]);
   const [annualKm, setAnnualKm] = useState(15000);
   const [years, setYears] = useState(5);
 
@@ -35,10 +58,16 @@ export function TcoCompare() {
     new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
 
   const handleAddCar = () => {
-    if (selectedVariants.length < 4) {
-      const nextVariant = availableVariants[selectedVariants.length % availableVariants.length];
-      setSelectedVariants([...selectedVariants, nextVariant]);
+    if (configs.length < 4) {
+      const nextVariant = availableVariants[configs.length % availableVariants.length];
+      setConfigs([...configs, createDefaultConfig(nextVariant)]);
     }
+  };
+
+  const updateConfig = (index: number, field: keyof VariantConfig, value: number) => {
+    const newConfigs = [...configs];
+    newConfigs[index] = { ...newConfigs[index], [field]: value };
+    setConfigs(newConfigs);
   };
 
   const getPowertrainFlair = (powertrain: string) => {
@@ -80,50 +109,44 @@ export function TcoCompare() {
           variant="outline" 
           className="border-dashed" 
           onClick={handleAddCar}
-          disabled={selectedVariants.length >= 4}
+          disabled={configs.length >= 4}
         >
-          {selectedVariants.length >= 4 ? 'Max Cars Reached' : '+ Add Car'}
+          {configs.length >= 4 ? 'Max Cars Reached' : '+ Add Car'}
         </Button>
       </div>
 
       {/* Comparison Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {selectedVariants.map((variant, index) => {
+        {configs.map((config, index) => {
+          const { variant, acquisition, energyCostPerKm, annualMaintenance, annualInsurance, resalePercentage } = config;
           
-          const isEv = variant.powertrain === 'ELECTRIC';
-          const acquisition = isEv ? 1500000 : 1300000; // Mock prices for demo
-          
-          // Loan Assumptions: 80% financed at 8.5% over the full ownership tenure (or max 7 years)
           const loanTenure = Math.min(years * 12, 84); 
           const loanResults = calculateEMI({
             onRoadPrice: acquisition,
-            downPayment: acquisition * 0.2, // 20% down
+            downPayment: acquisition * 0.2, 
             annualInterestRate: 8.5,
             tenureInMonths: loanTenure,
             processingFee: 5000
           });
 
-          const energyCostPerKm = isEv ? 1.2 : 6.5;
-          const annualEnergy = annualKm * energyCostPerKm;
-          const totalEnergy = annualEnergy * years;
-          const totalService = (isEv ? 5000 : 8000) * years;
-          const insurance = (isEv ? 25000 : 20000) * years;
-          const resale = acquisition * (isEv ? 0.45 : 0.55);
+          const totalEnergy = annualKm * energyCostPerKm * years;
+          const totalService = annualMaintenance * years;
+          const insurance = annualInsurance * years;
+          const resale = acquisition * (resalePercentage / 100);
           
-          // Total Cash Outflow + Depreciation - Principal (since principal is in acquisition)
           const economicTco = acquisition + loanResults.totalInterest + loanResults.fees + totalEnergy + totalService + insurance - resale;
 
           return (
             <Card key={`${variant.id}-${index}`} className="relative hover:border-primary-500 transition-colors">
-              <div className="absolute -top-3 left-4">
+              <div className="absolute -top-3 left-4 z-10">
                 <ConfidenceBadge score={variant.statusProvenance.confidence} />
               </div>
               <CardContent className="pt-8 space-y-6">
                 <div>
-                  <h3 className="font-serif font-bold text-2xl leading-tight text-white mb-2">{variant.name}</h3>
+                  <h3 className="font-serif font-bold text-xl leading-tight text-white mb-2">{variant.name}</h3>
                   <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest flex items-center">
                     {getPowertrainFlair(variant.powertrain)}
-                    {variant.powertrain} · {variant.brand}
+                    {variant.powertrain}
                   </p>
                 </div>
                 
@@ -134,30 +157,67 @@ export function TcoCompare() {
                 </div>
 
                 <div className="space-y-3 text-sm">
-                  <div className="flex justify-between border-b border-slate-800 pb-2">
-                    <span className="text-slate-400 font-medium">Acquisition</span>
-                    <span className="font-bold text-slate-200">{formatCurrency(acquisition)}</span>
+                  
+                  {/* Editable Fields */}
+                  <div className="flex justify-between items-center border-b border-slate-800 pb-2 group">
+                    <span className="text-slate-400 font-medium text-xs uppercase tracking-widest">Acquisition (₹)</span>
+                    <input 
+                      type="number" 
+                      value={acquisition} 
+                      onChange={(e) => updateConfig(index, 'acquisition', Number(e.target.value))}
+                      className="w-24 text-right bg-transparent border-b border-transparent group-hover:border-slate-600 focus:border-primary-500 focus:outline-none font-bold text-slate-200 transition-colors"
+                    />
                   </div>
-                  <div className="flex justify-between border-b border-slate-800 pb-2">
-                    <span className="text-slate-400 font-medium">Finance Interest</span>
+                  
+                  <div className="flex justify-between items-center border-b border-slate-800 pb-2">
+                    <span className="text-slate-400 font-medium text-xs uppercase tracking-widest" title="80% Loan @ 8.5%">Finance Interest</span>
                     <span className="font-bold text-slate-200">{formatCurrency(loanResults.totalInterest)}</span>
                   </div>
-                  <div className="flex justify-between border-b border-slate-800 pb-2">
-                    <span className="text-slate-400 font-medium">Energy ({years}Y)</span>
-                    <span className="font-bold text-slate-200">{formatCurrency(totalEnergy)}</span>
+
+                  <div className="flex justify-between items-center border-b border-slate-800 pb-2 group">
+                    <span className="text-slate-400 font-medium text-xs uppercase tracking-widest">Energy ₹/km</span>
+                    <input 
+                      type="number" 
+                      step="0.1"
+                      value={energyCostPerKm} 
+                      onChange={(e) => updateConfig(index, 'energyCostPerKm', Number(e.target.value))}
+                      className="w-16 text-right bg-transparent border-b border-transparent group-hover:border-slate-600 focus:border-primary-500 focus:outline-none font-bold text-slate-200 transition-colors"
+                    />
                   </div>
-                  <div className="flex justify-between border-b border-slate-800 pb-2">
-                    <span className="text-slate-400 font-medium">Maintenance ({years}Y)</span>
-                    <span className="font-bold text-slate-200">{formatCurrency(totalService)}</span>
+
+                  <div className="flex justify-between items-center border-b border-slate-800 pb-2 group">
+                    <span className="text-slate-400 font-medium text-xs uppercase tracking-widest">Service/Yr (₹)</span>
+                    <input 
+                      type="number" 
+                      value={annualMaintenance} 
+                      onChange={(e) => updateConfig(index, 'annualMaintenance', Number(e.target.value))}
+                      className="w-20 text-right bg-transparent border-b border-transparent group-hover:border-slate-600 focus:border-primary-500 focus:outline-none font-bold text-slate-200 transition-colors"
+                    />
                   </div>
-                  <div className="flex justify-between border-b border-slate-800 pb-2">
-                    <span className="text-slate-400 font-medium">Insurance ({years}Y)</span>
-                    <span className="font-bold text-slate-200">{formatCurrency(insurance)}</span>
+
+                  <div className="flex justify-between items-center border-b border-slate-800 pb-2 group">
+                    <span className="text-slate-400 font-medium text-xs uppercase tracking-widest">Insurance/Yr (₹)</span>
+                    <input 
+                      type="number" 
+                      value={annualInsurance} 
+                      onChange={(e) => updateConfig(index, 'annualInsurance', Number(e.target.value))}
+                      className="w-20 text-right bg-transparent border-b border-transparent group-hover:border-slate-600 focus:border-primary-500 focus:outline-none font-bold text-slate-200 transition-colors"
+                    />
                   </div>
-                  <div className="flex justify-between text-primary-400 font-bold pt-1">
-                    <span>Est. Resale</span>
-                    <span>- {formatCurrency(resale)}</span>
+
+                  <div className="flex justify-between items-center text-primary-400 font-bold pt-1 group">
+                    <span className="text-xs uppercase tracking-widest">Resale %</span>
+                    <div className="flex items-center">
+                      <input 
+                        type="number" 
+                        value={resalePercentage} 
+                        onChange={(e) => updateConfig(index, 'resalePercentage', Number(e.target.value))}
+                        className="w-12 text-right bg-transparent border-b border-transparent group-hover:border-primary-800 focus:border-primary-500 focus:outline-none font-bold text-primary-400 transition-colors mr-1"
+                      />
+                      <span>%</span>
+                    </div>
                   </div>
+
                 </div>
               </CardContent>
             </Card>
