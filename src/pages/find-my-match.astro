@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { FindMyMatch } from '../components/FindMyMatch';
+---
+
+<Layout 
+	title="Find My Match - Car Recommendation Engine" 
+	description="Answer a few quick questions about your budget and needs to find the perfect car."
+>
+	<div class="bg-[#0b131e] border-b border-slate-800">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+			<div class="max-w-3xl text-center mx-auto">
+				<h1 class="text-4xl font-serif font-extrabold text-white tracking-tight sm:text-5xl">
+					Find Your Perfect Match
+				</h1>
+				<p class="mt-4 text-lg text-slate-400 font-medium">
+					Take our quick questionnaire to get objective car recommendations based on data, not sales pitches.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="bg-[#0b131e] min-h-[500px]">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+			<FindMyMatch client:load />
+		</div>
+	</div>
+</Layout>

@@ -36,19 +36,32 @@ const { title, description = 'Compare the true cost of owning cars in India usin
 							<span>CarScore<span class="text-primary-500">.in</span></span>
 						</a>
 					</div>
-					<nav class="hidden md:flex space-x-6 items-center">
-						<a href="/cars" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Cars Database</a>
-						<a href="/compare" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Compare Cars</a>
-						<a href="/calculators/total-cost-of-ownership" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">TCO Report</a>
-						<a href="/calculators/fuel-cost" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Fuel Cost</a>
-						<a href="/calculators/ev-charging-cost" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">EV Charging</a>
-						<a href="/calculators/ev-breakeven" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">EV Breakeven</a>
-						<a href="/calculators/affordability" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Affordability</a>
-						<a href="/calculators/emi" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">EMI</a>
-						<a href="/methodology/total-cost-of-ownership" class="text-slate-300 hover:text-white font-medium text-sm transition-colors">Methodology</a>
+					<nav class="hidden md:flex space-x-8 items-center">
+						<a href="/cars" class="text-slate-300 hover:text-white font-bold text-sm transition-colors">Vehicles</a>
+						<a href="/compare" class="text-slate-300 hover:text-white font-bold text-sm transition-colors">Compare</a>
+						
+						<div class="relative group">
+							<button class="text-slate-300 hover:text-white font-bold text-sm transition-colors flex items-center gap-1 py-4">
+								Calculators
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+							</button>
+							<div class="absolute left-0 top-[100%] hidden group-hover:block w-56 z-50">
+								<div class="bg-[#111a2a] border border-slate-700 rounded shadow-xl py-2 mt-[-8px]">
+									<a href="/calculators/total-cost-of-ownership" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">TCO Report</a>
+									<a href="/calculators/affordability" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">Affordability</a>
+									<a href="/calculators/ev-breakeven" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">EV Breakeven</a>
+									<a href="/calculators/emi" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">EMI</a>
+									<a href="/calculators/fuel-cost" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">Fuel Cost</a>
+									<a href="/calculators/depreciation" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">Resale Value / Depreciation</a>
+									<a href="/calculators/ev-charging-cost" class="block px-4 py-2 text-sm font-medium text-slate-300 hover:text-primary-400 hover:bg-slate-800 transition-colors">EV Charging Cost</a>
+								</div>
+							</div>
+						</div>
+
+						<a href="/methodology/total-cost-of-ownership" class="text-slate-300 hover:text-white font-bold text-sm transition-colors">About</a>
 					</nav>
 					<div class="hidden md:flex items-center">
-						<a href="/compare" class="border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-[#0b131e] font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded transition-colors">
+						<a href="/find-my-match" class="border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-[#0b131e] font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded transition-colors">
 							Find My Match
 						</a>
 					</div>
@@ -86,6 +99,7 @@ const { title, description = 'Compare the true cost of owning cars in India usin
 							<li><a href="/calculators/ev-breakeven" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">EV Breakeven</a></li>
 							<li><a href="/calculators/fuel-cost" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Fuel Efficiency</a></li>
 							<li><a href="/calculators/emi" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">EMI Breakdown</a></li>
+							<li><a href="/calculators/depreciation" class="text-sm text-slate-400 hover:text-primary-400 transition-colors">Resale Value</a></li>
 						</ul>
 					</div>
 					<div>
